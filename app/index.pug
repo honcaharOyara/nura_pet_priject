@@ -7,7 +7,200 @@ head
 body
     header
         nav
-            .logo
+            .header__logo
                 a(href="#")
-                    img(src="./img/logo.png")
-        section.banner
+                    img(src="./img/logo.png" alt="Logo" title="Nura elite")
+
+            .header__navigation
+                .header__navigation__contacts
+                    .header__navigation__contacts_messagers
+                        a(href="https://wa.me/4957777777")
+                            img(src="./img/whatsapp.svg" alt="Whatsapp" title="+77000011888")
+                    .header__navigation__contacts_numbers
+                        a(href="tel:+77000011888") +7 700 001 18 88
+                .header__navigation__nav_menu
+                ul
+                    li
+                        a(href="#") About project
+                    li
+                        a(href="#") Location
+                    li
+                        a(href="#") Benefits
+                    li
+                        a(href="#") Why we are
+                    li
+                         a(href="#") Payments methods
+                    li
+                        a(href="#") Contacts
+
+        section.header__banner
+            .header__banner__info
+                h1  Elite cottage village in Nur-Sultan
+                a(href="#").header__banner_info-btn Download presentation
+                h3 36 cottages
+                p #[span 3] cottages #[br] 440 yard² #[br] 1195 yard²
+                p #[span 33] cottages #[br] 214 yard² #[br] 597 yard²
+
+            .header__banner__deadlines
+                p #[b Construction work] began in September 2021.
+                p #[b Completion date] for cottages - I quarter of 2022
+                p #[b The deadline] for the completion of the entire cottage town is the II quarter of 2022
+
+    main
+        section._1_about-project
+            .about-project__title-info
+                h2 About project
+                p Elite closed cottage town in Nur-Sultan consisting of:
+                ul
+                    li - 440 yard² on 1195 yard²
+                    li - 214 yard² on 597 yard²
+
+            .about-project__about-company
+                h3 About company
+                p “MM Group” Group of Construction Companies is a modern and dynamically developing group of companies that provides a wide range of services in the construction business from design to turnkey delivery of facilities. She began her activities in the construction business in 2013 and has firmly established herself as a reliable Kazakhstani construction company not only in the territory of the Republic of Kazakhstan, but also abroad. The founder and CEO of the group of construction companies "MM Group" is Moldir Suyunshali.
+
+            .about-project__about-company
+                h3 Mission of company
+                p The priority of the group of construction companies "MM Group" is a professional approach with the use of innovative solutions in the construction of objects under construction, an experienced team, high-quality materials and timeliness of delivery of objects with an affordable opportunity to purchase not only housing, but also other real estate objects.
+
+            .about-project__about-company
+                h3 Company goal
+                p Strengthening the status of a company that is able to provide consumers with affordable and high-quality real estate on time. Development, reliability and quality!
+
+        section._2_slider
+            .slider__box.-active
+                img(src="./img/2_slider_img.jpg" alt="Cottage photo" title="Cottage")
+                img(src="./img/2_slider_img-planing.png" alt="Cottage planing" title="Planing")
+                img(src="./img/2_slider_img-dots-bg.png" alt)
+            .slider__box
+                img(src="./img/2_slider_img.jpg" alt="Cottage photo" title="Cottage")
+                img(src="./img/2_slider_img-planing.png" alt="Cottage planing" title="Planing")
+                img(src="./img/2_slider_img-dots-bg.png" alt)
+            .slider__box
+                img(src="./img/2_slider_img.jpg" alt="Cottage photo" title="Cottage")
+                img(src="./img/2_slider_img-planing.png" alt="Cottage planing" title="Planing")
+                img(src="./img/2_slider_img-dots-bg.png" alt)
+            .slider__box
+                img(src="./img/2_slider_img.jpg" alt="Cottage photo" title="Cottage")
+                img(src="./img/2_slider_img-planing.png" alt="Cottage planing" title="Planing")
+                img(src="./img/2_slider_img-dots-bg.png" alt)
+            .slider__prev-btn
+                .slider__prev-btn__inner
+            .slider__next-btn
+                .slider__next-btn__inner
+
+        section._3_location
+            .location__content
+                h2 Location
+                p Closed cottage village Nura Elite is located in an elite and promising area of the capital, next to the green belt in the neighborhood of Vella Village.
+                p Nura Elite is a great space for solitude and active family life in harmony with nature, without city noise and with convenient transport interchange.
+            .location__map
+                img(src="./img/3_location_img-map.jpg" alt="Map" title="Map")
+                img(src="./img/2_slider_img-dots-bg.png" alt)
+
+        section._4_advantages
+            h2 The main advantages of the town
+            ul
+                li Favorable location
+                li Protected area
+                li The town is fenced around the perimeter with a 3-meter fence, equipped with a 24/7 video surveillance system
+                li Here you will feel privacy, security and comfort
+                li
+                    img(src="./img/4_advantages_img.png" alt="Protected area" title="Protected area")
+                li Individual plots are fenced with 2-meter fences
+                li Own application
+                li Each owner of the cottage is given the opportunity to build additional buildings on his land plot: a bathhouse, a sauna, a summer kitchen, etc.
+
+        section._5_why-nura
+            h2 Why NURA ELITE
+            .why-nura__img-box
+                img(src="./img/5_why-nura_img.jpg")
+                img(src="./img/2_slider_img-dots-bg.png")
+            ul
+                li
+                    b Energy efficiency
+                    p Houses keep warm in winter and cool in summer
+                li
+                    b Ecologically clean area
+                    p The town is located near the forest belt and the village of Nura-Yesil
+                li
+                    b Security
+                    p Closed campus with round-the-clock video surveillance
+                li
+                    b Communications
+                    p Centralized water supply, power supply and sewerage.
+                    p The heating system and hot water is one common gas tank for the entire town, functioning at the expense of gas.
+
+        section._6_technologies
+            h2 Building technology
+            ul
+                li
+                    img(src="./img/6_technology_img-1.png" alt="Wall construction" title="Wall construction")
+                    b Wall construction
+                    p Double burnt red brickwork - 38/40 cm, insulated with mineral board - 10 cm, and cladding with HPL and FBC panel
+                li
+                    img(src="./img/6_technology_img-2.png" alt="Window construction" title="Window construction")
+                    b Window construction
+                    p High environmental friendliness, safety, reliability and durability, enhanced heat-insulating capacity, which is provided by a five-chamber structure of a profile with triple glazing and sound insulation (the Helios system is designed for 44 mm thick double-glazed windows with an air gap of 16 mm, passing through which low-frequency noises lose their intensity, which is very valued by residents) using FUNKE technology
+                li
+                    img(src="./img/6_technology_img-3.png" alt="Door construction" title="Door construction")
+                    b Door construction
+                    p IZO TERMO technology.
+                    The doors do not touch the outer ones. Between them is an insulator - a shield made of Portuguese cork oak 8 mm thick. IZO TERMO eliminates the "cold bridge" and does not allow heat to leave the house. With this technology, you do not need a vestibule and a second door.
+                li
+                    img(src="./img/6_technology_img-4.png" alt="Roof structure" title="Roof structure")
+                    b Roof structure
+                    p Flexible tile TECHNONICOL SHINGLAS is a guarantee of comfort and safety of your home. Houses with a roof made of TECHNONICOL SHINGLAS shingles captivate with their harmony and grace. The collections are distinguished by a variety of shapes and colors.
+                li
+                    img(src="./img/6_technology_img-5.png" alt="Façade construction" title="Façade construction")
+                    b Façade construction
+                    p HPL panel is a high quality construction product for durable facade cladding. Weather resistance +180s/-180s with high weatherproofing effect. This protection is provided by the use of dual-curing acrylic polyurethane resins. Refers to environmentally friendly materials.
+                li
+                    img(src="./img/6_technology_img-6.png" alt="" title="")
+                    b Foundation blocks wall
+                    p FBC is a unique and high-quality building material for durable facade cladding.
+                        | High frost resistance, fire safety, good sound and heat insulation, tightness, increased strength, weather resistance.
+                        | for both humans and the environment. They do not contain asbestos, consist of environmentally friendly natural ingredients: 82-85% cement, wood fiber, weight loss additives, organosilicon compounds
+            .technologies__download-presentation
+                h2 Download presentation
+                p Leave your contacts and we will send you
+                form
+                    input(type="text")
+                    input(type="tel")
+                    input(type="submit")
+
+        section._7_payments
+            h2 Payment methods
+            ul
+                li
+                    img(scr="./img/7_payments_icon-1.png")
+                    p Getting a loan through “ЖилСтройСберБанк”
+                li
+                    img(scr="./img/7_payments_icon-2.png")
+                    p Obtaining interest-free installments from the developer NURA ELITE
+                i
+                    img(scr="./img/7_payments_icon-3.png")
+                    p Kazakhstan Mortgage Company «Орда»
+                li
+                    img(scr="./img/7_payments_icon-4.png")
+                    p Payment with cryptocurrency (Bitcoin)
+            .payments__adress
+                .payments__adress__map
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.755751349219!2d71.42242228172763!3d51.13141316940208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586a04e901251%3A0x5047617e2afb5feb!2z0JjQt9GD0LzRgNGD0LTQvdGL0Lkg0LrQsi3Quywg0YPQuy4g0JTQuNC90LzRg9GF0LDQvNC10LTQsCDQmtGD0L3QsNC10LLQsCAxMCwg0J3Rg9GALdCh0YPQu9GC0LDQvSAwMjAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sua!4v1646328085084!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                .payments__adress__contats
+                    h2 Contacts
+                    p st. Kunaeva 10, business center "Emerald", block - A, floor 1
+                    a(href="tel:+77000011888") +7 (700) 001-18-88
+                    a(href="mailto:info@nuramm.kz") info@nuramm.kz
+                    a(href="https://www.instagram.com/nura_premier/" target="_blank") @nura.premier
+
+    footer
+        ul
+            li
+                a(href="#") Benefits
+            li
+                a(href="#") Why we are
+            li
+                a(href="#") Technologies
+            li
+                a(href="#") Payments methods
