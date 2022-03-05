@@ -1,12 +1,15 @@
 doctype html
 head
+    meta(charset="UTF-8")
+    meta(name='viewport' content='width=device-width, initial-scale = 1')
     title Nura elite
     link(rel="icon" type="image/x-icon" href="./img/favicon.png")
+    link(rel='stylesheet' href='./css/nullstyle.css')
     link(rel='stylesheet' href='./css/main.css')
 
 body
     header
-        nav
+        nav.container
             .header__logo
                 a(href="#")
                     img(src="./img/logo.png" alt="Logo" title="Nura elite")
@@ -19,34 +22,39 @@ body
                     .header__navigation__contacts_numbers
                         a(href="tel:+77000011888") +7 700 001 18 88
                 .header__navigation__nav_menu
-                ul
-                    li
-                        a(href="#") About project
-                    li
-                        a(href="#") Location
-                    li
-                        a(href="#") Benefits
-                    li
-                        a(href="#") Why we are
-                    li
-                         a(href="#") Payments methods
-                    li
-                        a(href="#") Contacts
+                    ul
+                        li
+                            a(href="#") About project
+                        li
+                            a(href="#") Location
+                        li
+                            a(href="#") Benefits
+                        li
+                            a(href="#") Why we are
+                        li
+                             a(href="#") Payments methods
+                        li
+                            a(href="#") Contacts
 
-        section.header__banner
+        section.header__banner.container
             .header__banner__info
-                h1  Elite cottage village in Nur-Sultan
-                a(href="#").header__banner_info-btn Download presentation
+                h1  Elite cottage village in Nur-Sultan city
+                a.header__banner_info-btn(href="#") Download presentation
                 h3 36 cottages
-                p #[span 3] cottages #[br] 440 yard² #[br] 1195 yard²
-                p #[span 33] cottages #[br] 214 yard² #[br] 597 yard²
+                .header__banner__info__box
+                    div
+                        div 3
+                        div cottages #[br] 440 yard² #[br] 1195 yard²
+                    div
+                        div 33
+                        div cottages #[br] 214 yard² #[br] 597 yard²
 
-            .header__banner__deadlines
+            .header__banner__deadlines.line-height22px
                 p #[b Construction work] began in September 2021.
                 p #[b Completion date] for cottages - I quarter of 2022
                 p #[b The deadline] for the completion of the entire cottage town is the II quarter of 2022
 
-    main
+    main.container
         section._1_about-project
             .about-project__title-info
                 h2 About project
@@ -194,7 +202,7 @@ body
                     a(href="mailto:info@nuramm.kz") info@nuramm.kz
                     a(href="https://www.instagram.com/nura_premier/" target="_blank") @nura.premier
 
-    footer
+    footer.container
         ul
             li
                 a(href="#") Benefits

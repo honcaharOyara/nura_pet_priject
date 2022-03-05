@@ -10,3 +10,134 @@
   src: url("../fonts/firasans-bold-webfont.svg") format("svg")
   src: url("../fonts/firasans-bold-webfont.woff") format("woff")
   src: url("../fonts/firasans-bold-webfont.woff2") format("woff2")
+/*=================== Fonts ===================*/
+
+.container
+  padding: 0 10px
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+
+.line-height22px
+  line-height: 1.375rem
+
+/*=================== Variables ===================*/
+$font17px: 1.0625rem
+$font18px: 1.125rem
+$font20px: 1.25rem
+$font32px: 2rem
+$font38px: 2.375rem
+$font48px: 3rem
+$font128px: 8rem
+
+/*=================== Mixins ===================*/
+=display($property)
+  display: -webkit-$property
+  display: -ms-$property
+  display: $property
+
+/*=================== Header ===================*/
+header
+  padding-bottom: 114px
+  background: url("../img/header_bg.jpg") center -50px no-repeat fixed
+  color: #fff
+
+  nav.container
+    +display(flex)
+    margin-bottom: 115px
+
+    justify-content: space-between
+
+    .header__logo
+      a
+        img
+          max-width: 144px
+          max-height: 137px
+          min-width: 50px
+          min-height: 40px
+          width: 100%
+
+    .header__navigation
+      position: relative
+      padding-top: 71px
+
+      .header__navigation__contacts
+        position: absolute
+        top: 25px
+        right: 0
+
+        +display(flex)
+        margin-bottom: 25px
+
+        .header__navigation__contacts_numbers
+          a
+            position: relative
+            margin-left: 35px
+            padding: 10px 20px 10px 52px
+            color: #fff
+            border: 1px #DBA069 solid
+            border-radius: 3px
+
+            &:before
+              content: url("../img/phone.svg")
+              margin-right: 10px
+              position: absolute
+              top: 6px
+              left: 20px
+
+      .header__navigation__nav_menu
+        ul
+          +display(flex)
+
+          li
+            margin-left: 50px
+
+            a
+              color: #fff
+
+  section.header__banner.container
+    +display(flex)
+
+    .header__banner__info
+      width: 100%
+      max-width: 846px
+      font-size: $font20px
+
+      h1
+        margin-bottom: 20px
+        font-size: $font38px
+        font-weight: 700
+
+      a
+        max-width: 285px
+        display: block
+        margin-bottom: 40px
+        padding: 20px 30px
+        font-weight: 700
+        color: #000
+        background-color: #DBA069
+
+      h3
+        margin-bottom: 20px
+        font-size: $font32px
+        font-weight: 700
+
+      .header__banner__info__box
+        +display(flex)
+
+        div
+          +display(flex)
+          margin: auto 0
+
+          div:first-child
+            font-size: $font128px
+
+        div:first-child
+          margin-right: 26px
+
+    .header__banner__deadlines
+      width: 100%
+      max-width: 296px
+
+      p:not(:last-child)
+        margin-bottom: 20px
