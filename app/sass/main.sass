@@ -36,6 +36,19 @@ $font128px: 8rem
   display: -ms-$property
   display: $property
 
+=grid-layout($column, $row)
+  -webkit-grid-template-columns: $column
+  -ms-grid-template-columns: $column
+  grid-template-columns: $column
+  -webkit-grid-template-rows: $row
+  -ms-grid-template-rows: $row
+  grid-template-rows: $row
+
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
 /*=================== Header ===================*/
 header
   padding-bottom: 114px
@@ -65,11 +78,19 @@ header
         position: absolute
         top: 25px
         right: 0
-
         +display(flex)
         margin-bottom: 25px
 
         .header__navigation__contacts_numbers
+          transition: all 1s ease
+
+          &:active
+            transform: scale(.97)
+
+          &:hover
+            a
+              background-color: rgb(219, 160, 105)
+
           a
             position: relative
             margin-left: 35px
@@ -77,6 +98,9 @@ header
             color: #fff
             border: 1px #DBA069 solid
             border-radius: 3px
+            transition: all 1s ease
+
+
 
             &:before
               content: url("../img/phone.svg")
@@ -90,10 +114,28 @@ header
           +display(flex)
 
           li
+            position: relative
             margin-left: 50px
 
             a
               color: #fff
+
+            &:after
+              content: ""
+              position: absolute
+              left: 0
+              bottom: -5px
+              height: 4px
+              width: 1%
+              transition: all 1s ease
+
+            &:active
+              transform: scale(.97)
+
+            &:hover
+              &:after
+                width: 100%
+                background-color: #DBA069
 
   section.header__banner.container
     +display(flex)
@@ -116,6 +158,14 @@ header
         font-weight: 700
         color: #000
         background-color: #DBA069
+        transition: all .5s ease
+
+        &:hover
+          color: #ffffff
+
+        &:active
+          transform: scale(.97)
+          background-color: #b48559
 
       h3
         margin-bottom: 20px
@@ -141,3 +191,86 @@ header
 
       p:not(:last-child)
         margin-bottom: 20px
+
+/* =================== Main =================== */
+main
+
+  // =============== About project =============== //
+  section._1_about-project.container
+    padding-top: 127px
+
+    h2
+      margin-bottom: 60px
+      font-size: $font48px
+      font-weight: 700
+
+    .about-project__wrap
+      +display(grid)
+      +grid-layout(600px 442px, .5fr .5fr .5fr)
+      justify-content: space-between
+
+      .about-project__company-logo__box
+        position: relative
+
+        .about-project__company-logo__img,
+        .about-project__company-logo__bg-color,
+        .about-project__company-logo__bg-dots
+          display: block
+          position: absolute
+          width: 442px
+          height: 418px
+          transition: all .5s ease
+
+        .about-project__company-logo__img
+          z-index: 3
+
+        .about-project__company-logo__bg-color
+          background-color: #842231
+          z-index: 2
+
+        .about-project__company-logo__bg-dots
+          background: url("../img/dots.svg")
+          z-index: 1
+
+        &:hover
+          .about-project__company-logo__img
+            transform: translate(-80px, -80px)
+
+
+          .about-project__company-logo__bg-color
+            transform: translate(-40px, -40px)
+
+
+      .about-project__about-company
+        margin-bottom: 60px
+
+        h3
+          font-size: $font20px
+          font-weight: 700
+          line-height: 22px
+          margin-bottom: 20px
+
+        p
+          margin-bottom: 20px
+          font-size: $font20px
+          line-height: 22px
+
+        b
+          font-size: $font20px
+          line-height: 22px
+
+        ul
+          li
+            font-size: $font20px
+            line-height: 22px
+
+  // =============== Slider =============== //
+  section._2_slider
+    padding-top: 40px
+    background-color: rgba(132, 34, 49, 0.05)
+
+    .slider__wrap.container
+      h2
+        font-size: $font48px
+        font-weight: 700
+        margin-bottom: 28px
