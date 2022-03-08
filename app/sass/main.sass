@@ -127,7 +127,7 @@ header
               bottom: -5px
               height: 4px
               width: 1%
-              transition: all 1s ease
+              transition: all .5s ease
 
             &:active
               transform: scale(.97)
@@ -222,13 +222,19 @@ main
           transition: all .5s ease
 
         .about-project__company-logo__img
+          top: -20px
+          left: -20px
           z-index: 3
 
         .about-project__company-logo__bg-color
+          top: -10px
+          left: -10px
           background-color: #842231
           z-index: 2
 
         .about-project__company-logo__bg-dots
+          top: 10px
+          left: 10px
           background: url("../img/dots.svg")
           z-index: 1
 
@@ -266,11 +272,65 @@ main
 
   // =============== Slider =============== //
   section._2_slider
-    padding-top: 40px
+    margin-bottom: 90px
+    padding: 40px 0 45px 0
     background-color: rgba(132, 34, 49, 0.05)
 
-    .slider__wrap.container
+    .container
       h2
         font-size: $font48px
         font-weight: 700
-        margin-bottom: 28px
+
+      .slider__wrap
+        position: relative
+        overflow: hidden
+
+        .slider__slides
+          +display(flex)
+          width: 100%
+          overflow: hidden
+          transition: all 1s ease
+
+          .slider__box
+            padding: 30px 50px
+            width: 100%
+            background: url("../img/dots.svg") 70px 66px no-repeat
+
+
+            .slider__box__inner
+              padding-left: 50px
+              +display(flex)
+              justify-content: space-between
+              max-width: 1000px
+
+              img:first-child
+                max-width: 600px
+
+              img:last-child
+                max-width: 400px
+
+        .slider__prev-btn,
+        .slider__next-btn
+          position: absolute
+          top: 50%
+          transform: translate( 0, -50%)
+          z-index: 2
+          cursor: pointer
+          transition: all .5s ease
+
+          img
+            position: relative
+            z-index: 1
+
+        .slider__prev-btn
+          left: 0
+
+        .slider__next-btn
+          right: 0
+
+        .slider__prev-btn:active,
+        .slider__next-btn:active
+          img
+            transform: scale(.97)
+
+    // =============== Location =============== //
