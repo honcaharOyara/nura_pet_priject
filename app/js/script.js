@@ -13,7 +13,6 @@ function init() {
                 item.style.width = width + 'px'
                 item.style.height = 'auto'
         })
-        console.log(width)
 }
 
 window.addEventListener('resize', init)

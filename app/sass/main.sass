@@ -36,6 +36,11 @@ $font128px: 8rem
   display: -ms-$property
   display: $property
 
+=flex-wrap($property)
+  -webkit-flex-wrap: $property
+  -ms-flex-wrap: $property
+  flex-wrap: $property
+
 =grid-layout($column, $row)
   -webkit-grid-template-columns: $column
   -ms-grid-template-columns: $column
@@ -48,6 +53,11 @@ $font128px: 8rem
   -webkit-transform: $property
   -ms-transform: $property
   transform: $property
+
+=ul-columns($property)
+  -moz-column-count: $property
+  -webkit-column-count: $property
+  column-count: $property
 
 /*=================== Header ===================*/
 header
@@ -149,6 +159,8 @@ header
         margin-bottom: 20px
         font-size: $font38px
         font-weight: 700
+        color: #ffffff
+
 
       a
         max-width: 285px
@@ -171,6 +183,8 @@ header
         margin-bottom: 20px
         font-size: $font32px
         font-weight: 700
+        color: #ffffff
+
 
       .header__banner__info__box
         +display(flex)
@@ -178,16 +192,25 @@ header
         div
           +display(flex)
           margin: auto 0
+          color: #ffffff
 
           div:first-child
             font-size: $font128px
+            color: #ffffff
 
         div:first-child
           margin-right: 26px
+          color: #ffffff
 
     .header__banner__deadlines
       width: 100%
       max-width: 296px
+
+      p
+        color: #ffffff
+
+        b
+          color: #ffffff
 
       p:not(:last-child)
         margin-bottom: 20px
@@ -212,7 +235,7 @@ main
       .about-project__company-logo__box
         position: relative
 
-        .about-project__company-logo__img,
+        img.about-project__company-logo__img,
         .about-project__company-logo__bg-color,
         .about-project__company-logo__bg-dots
           display: block
@@ -272,7 +295,6 @@ main
 
   // =============== Slider =============== //
   section._2_slider
-    margin-bottom: 90px
     padding: 40px 0 45px 0
     background-color: rgba(132, 34, 49, 0.05)
 
@@ -294,7 +316,8 @@ main
           .slider__box
             padding: 30px 50px
             width: 100%
-            background: url("../img/dots.svg") 70px 66px no-repeat
+            background: url("../img/dots.svg") 70px 51px no-repeat
+            transition: all .5s ease
 
 
             .slider__box__inner
@@ -333,4 +356,353 @@ main
           img
             transform: scale(.97)
 
-    // =============== Location =============== //
+      .slider__wrap:hover
+        .slider__box
+          background: url("../img/dots.svg") 60px 61px no-repeat
+
+
+  // =============== Location =============== //
+  section._3_location.container
+    padding: 90px 0 30px 0
+    +display(flex)
+    justify-content: space-between
+
+    .location__content,
+    .location__map
+      max-width: 550px
+
+    .location__content
+      padding-top: 90px
+
+      h2
+        margin-bottom: 48px
+        font-size: $font48px
+        font-weight: 700
+
+      p
+        font-size: $font20px
+        line-height: 22px
+
+      p:not(:last-child)
+        margin-bottom: 25px
+
+    .location__map
+      width: 550px
+      height: 520px
+      position: relative
+
+      .location__map__img,
+      .location__map__bg-color,
+      .location__map__bg-dots
+        display: block
+        position: absolute
+        width: 518px
+        height: 400px
+        transition: all .5s ease
+
+      .location__map__img
+        z-index: 3
+
+      .location__map__bg-color
+        top: 22px
+        left: 22px
+        background-color: #842231
+        z-index: 2
+
+      .location__map__bg-dots
+        top: 61px
+        left: 40px
+        z-index: 1
+
+      &:hover
+          .location__map__bg-color
+            transform: translate(20px, 20px)
+
+
+          .location__map__bg-dots
+            transform: translate(50px, 30px)
+
+  // =============== Advantages =============== //
+  section._4_advantages
+    position: relative
+
+    .container
+      max-width: 900px
+      padding: 60px 0 80px 0
+      position: relative
+
+      .advantages__dots
+        position: absolute
+        top: -62px
+        left: -270px
+        z-index: 0
+
+      .advantages__bg
+        position: absolute
+        top: -4px
+        left: -270px
+        z-index: 1
+
+      .advantages__content-box
+        position: relative
+        z-index: 2
+
+        h2
+          margin-bottom: 40px
+          font-size: $font48px
+          font-weight: 700
+
+        .advantages__imb-box
+          margin-bottom: 60px
+
+        ul
+          +ul-columns(2)
+
+          li
+            margin: 0 60px 50px 0
+            +display(flex)
+
+            img
+              margin-right: 15px
+              max-width: 56px
+
+            p
+              font-size: $font20px
+              line-height: 22px
+
+        ul:last-child
+          +ul-columns(1)
+
+          li:last-child
+            width: 100%
+
+  // =============== Why nura =============== //
+  section._5_why-nura.container
+    padding-top: 99px
+    margin-bottom: 34px
+
+    h2
+      margin-bottom: 99px
+      font-size: $font48px
+      font-weight: 700
+
+    .why__nura__content-box
+      +display(flex)
+
+      .why-nura__img-box
+        margin-right: 40px
+        position: relative
+        width: 453px
+        height: 400px
+
+        img.why-nura__img,
+        .why-nura__bg-color,
+        img.why-nura__bg-dots
+          display: block
+          position: absolute
+          transition: all .5s ease
+
+        img.why-nura__img,
+        .why-nura__bg-color
+          width: 453px
+          height: 400px
+
+        img.why-nura__img
+          top: 0
+          right: 0
+          z-index: 3
+
+        .why-nura__bg-color
+          top: 17px
+          left: -17px
+          z-index: 2
+          background-color: #842231
+
+        img.why-nura__bg-dots
+          max-height: 397px
+          top: 43px
+          right: 33px
+          z-index: 1
+
+        &:hover
+          .why-nura__bg-color
+            top: 35px
+            left: -42px
+
+          img.why-nura__bg-dots
+            top: 82px
+            right: 77px
+
+      ul:last-child
+        margin-left: 15px
+
+      ul
+        padding: 86px 0 124px 0
+        max-width: 336px
+
+        li
+          +display(flex)
+          margin-bottom: 40px
+
+          img
+            margin-right: 15px
+
+          span
+            b,
+            p
+              font-size: $font18px
+
+            p:last-child
+              margin-top: 20px
+
+  // =============== Technologies =============== //
+  section._6_technologies.container
+    padding-top: 127px
+
+    h2
+      margin-bottom: 43px
+      font-size: $font48px
+      font-weight: 700
+      text-align: center
+
+    .technologies__content-box
+      +display(flex)
+      justify-content: space-between
+
+      ul:last-child
+        margin-top: 55px
+
+      ul
+        max-width: 500px
+
+        li
+          margin-bottom: 80px
+
+          img
+            margin-bottom: 32px
+
+          h3
+            margin-bottom: 12px
+            font-size: $font20px
+            font-weight: 700
+
+          p
+            font-size: $font18px
+            line-height: 20px
+
+    .technologies__download-presentation
+      padding: 70px 150px
+      border: 8px #842231 solid
+      border-radius: 8px
+
+      h2
+        margin-bottom: 12px
+
+      p
+        margin-bottom: 36px
+        font-size: 1.3125rem
+        font-weight: 400
+        text-align: center
+
+      form
+        +display(flex)
+
+        input
+          padding: 32px 0 32px 58px
+          max-width: 280px
+          width: 100%
+          color: #7E868E
+          background-color: #E5E5E5
+          border-radius: 8px
+
+
+        input:not(:last-child)
+          margin-right: 20px
+
+        input:last-child
+          padding: 32px 0
+          font-size: $font18px
+          font-weight: 500
+          color: #ffffff
+          background-color: #842231
+          cursor: pointer
+
+  // =============== Payments =============== //
+  section._7_payments.container
+    padding-top: 131px
+    margin-bottom: 56px
+
+    h2
+      margin-bottom: 60px
+      font-size: $font48px
+      font-weight: 700
+      text-align: center
+
+    >ul
+      margin: 0 auto
+      +display(flex)
+      justify-content: space-between
+      max-width: 883px
+      width: 100%
+      text-align: center
+
+      li
+        img
+          max-height: 80px
+          height: 100%
+          margin-bottom: 15px
+
+        p
+          font-size: 1.0625rem
+          font-weight: 700
+
+    .payments__adress
+      margin-top: 100px
+      +display(flex)
+      justify-content: space-between
+
+      .payments__adress__contacts
+        h2
+          font-size: $font48px
+          font-weight: 700
+          margin-bottom: 30px
+
+        p
+          margin-bottom: 30px
+          font-size: $font18px
+
+        .payments__adress__contacts-box
+          +display(flex)
+          justify-content: space-between
+
+          ul
+            margin-top: 3px
+            li
+              +display(flex)
+
+              img
+                margin-right: 12px
+
+            li:not(:last-child)
+              margin-bottom: 10px
+
+/*=================== Footer ===================*/
+footer
+  padding: 44px 0
+  background-color: #F9F4F4
+
+  .container
+    ul
+      +display(flex)
+      justify-content: center
+      max-width: 688px
+      width: 100%
+      margin: 0 auto
+
+      li
+        a
+          font-size: $font18px
+          line-height: 22px
+
+      li:not(:last-child)
+        margin-right: 60px
