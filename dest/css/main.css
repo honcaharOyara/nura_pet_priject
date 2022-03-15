@@ -247,7 +247,7 @@ main section._1_about-project.container .about-project__wrap .about-project__wra
   top: 16px;
   left: 20px;
   z-index: 1;
-  background: url("../img/_3_location__dots.svg");
+  background: url("../img/3_location__dots.svg");
 }
 main section._1_about-project.container .about-project__wrap .about-project__wrap-inner:last-child .about-project__company-logo__box:hover img.about-project__company-logo__img {
   bottom: 33px;
@@ -373,7 +373,7 @@ main section._3_location.container .location__map-box .location__map__bg-dots {
   top: 9px;
   left: 20px;
   z-index: 1;
-  background: url("../img/_3_location__dots.svg");
+  background: url("../img/3_location__dots.svg");
 }
 main section._3_location.container .location__map-box:hover .location__map__img {
   bottom: 42px;
@@ -486,7 +486,7 @@ main section._5_why-nura.container .why__nura__content-box .why-nura__img-box .w
   top: 9px;
   right: 25px;
   z-index: 1;
-  background: url("../img/_3_location__dots.svg");
+  background: url("../img/3_location__dots.svg");
 }
 main section._5_why-nura.container .why__nura__content-box .why-nura__img-box:hover img.why-nura__img {
   bottom: 53px;
