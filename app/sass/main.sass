@@ -1,3 +1,30 @@
+/*=================== Variables ===================*/
+$font17px: 1.0625rem
+$font18px: 1.125rem
+$font20px: 1.25rem
+$font22px: 1.375rem
+$font32px: 2rem
+$font38px: 2.375rem
+$font48px: 3rem
+$font128px: 8rem
+
+/*=================== Mixins ===================*/
+=display($property)
+  display: -webkit-$property
+  display: -ms-$property
+  display: $property
+
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+=ul-columns($property)
+  -moz-column-count: $property
+  -webkit-column-count: $property
+  column-count: $property
+
+/*=================== Fonts ===================*/
 @font-face
   font-family: "Fira sans", sans-serif
   src: url("../fonts/FiraSans-Light.ttf") format("ttf")
@@ -10,7 +37,7 @@
   src: url("../fonts/firasans-bold-webfont.svg") format("svg")
   src: url("../fonts/firasans-bold-webfont.woff") format("woff")
   src: url("../fonts/firasans-bold-webfont.woff2") format("woff2")
-/*=================== Fonts ===================*/
+
 
 .container
   padding: 0 10px
@@ -18,46 +45,9 @@
   width: 100%
   margin: 0 auto
 
-.line-height22px
-  line-height: 1.375rem
-
-/*=================== Variables ===================*/
-$font17px: 1.0625rem
-$font18px: 1.125rem
-$font20px: 1.25rem
-$font32px: 2rem
-$font38px: 2.375rem
-$font48px: 3rem
-$font128px: 8rem
-
-/*=================== Mixins ===================*/
-=display($property)
-  display: -webkit-$property
-  display: -ms-$property
-  display: $property
-
-=flex-wrap($property)
-  -webkit-flex-wrap: $property
-  -ms-flex-wrap: $property
-  flex-wrap: $property
-
-=grid-layout($column, $row)
-  -webkit-grid-template-columns: $column
-  -ms-grid-template-columns: $column
-  grid-template-columns: $column
-  -webkit-grid-template-rows: $row
-  -ms-grid-template-rows: $row
-  grid-template-rows: $row
-
-=transform($property)
-  -webkit-transform: $property
-  -ms-transform: $property
-  transform: $property
-
-=ul-columns($property)
-  -moz-column-count: $property
-  -webkit-column-count: $property
-  column-count: $property
+.h2-title
+  font-size: $font48px
+  font-weight: 700
 
 /*=================== Header ===================*/
 header
@@ -205,6 +195,7 @@ header
     .header__banner__deadlines
       width: 100%
       max-width: 296px
+      line-height: $font22px
 
       p
         color: #ffffff
@@ -220,78 +211,76 @@ main
 
   // =============== About project =============== //
   section._1_about-project.container
-    padding-top: 127px
-
-    h2
-      margin-bottom: 60px
-      font-size: $font48px
-      font-weight: 700
+    padding: 127px 0 52px 0
 
     .about-project__wrap
-      +display(grid)
-      +grid-layout(600px 442px, .5fr .5fr .5fr)
+      +display(flex)
       justify-content: space-between
 
-      .about-project__company-logo__box
-        position: relative
+      .about-project__wrap-inner
+        .about-project__about-company
 
-        img.about-project__company-logo__img,
-        .about-project__company-logo__bg-color,
-        .about-project__company-logo__bg-dots
-          display: block
-          position: absolute
-          width: 442px
-          height: 418px
-          transition: all .5s ease
-
-        .about-project__company-logo__img
-          top: -20px
-          left: -20px
-          z-index: 3
-
-        .about-project__company-logo__bg-color
-          top: -10px
-          left: -10px
-          background-color: #842231
-          z-index: 2
-
-        .about-project__company-logo__bg-dots
-          top: 10px
-          left: 10px
-          background: url("../img/dots.svg")
-          z-index: 1
-
-        &:hover
-          .about-project__company-logo__img
-            transform: translate(-80px, -80px)
-
-
-          .about-project__company-logo__bg-color
-            transform: translate(-40px, -40px)
-
-
-      .about-project__about-company
-        margin-bottom: 60px
-
-        h3
-          font-size: $font20px
-          font-weight: 700
-          line-height: 22px
-          margin-bottom: 20px
-
-        p
-          margin-bottom: 20px
-          font-size: $font20px
-          line-height: 22px
-
-        b
-          font-size: $font20px
-          line-height: 22px
-
-        ul
-          li
+          h3
             font-size: $font20px
-            line-height: 22px
+            font-weight: 700
+
+          p
+            font-size: $font20px
+            line-height: $font22px
+
+      .about-project__wrap-inner:first-child
+        max-width: 680px
+        width: 100%
+
+        .about-project__about-company
+          margin-top: 70px
+
+      .about-project__wrap-inner:last-child
+        max-width: 440px
+        width: 100%
+
+        .about-project__company-logo__box
+          margin-bottom: 90px
+          max-width: 442px
+          max-height: 418px
+          width: 100%
+          height: 100%
+          position: relative
+
+          img.about-project__company-logo__img,
+          .about-project__company-logo__bg-color,
+          .about-project__company-logo__bg-dots
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            transition: all .5s ease
+            
+          img.about-project__company-logo__img
+            bottom: 10px
+            right: 15px
+            z-index: 3
+            
+          .about-project__company-logo__bg-color
+            bottom: 0
+            right: 0
+            z-index: 2
+            background-color: #842231
+            
+          .about-project__company-logo__bg-dots
+            top: 16px
+            left: 20px
+            z-index: 1
+            background: url("../img/_3_location__dots.svg")
+
+        .about-project__company-logo__box:hover
+          img.about-project__company-logo__img
+            bottom: 33px
+            right: 42px
+
+          .about-project__company-logo__bg-dots
+            top: 40px
+            left: 40px
 
   // =============== Slider =============== //
   section._2_slider
@@ -299,10 +288,6 @@ main
     background-color: rgba(132, 34, 49, 0.05)
 
     .container
-      h2
-        font-size: $font48px
-        font-weight: 700
-
       .slider__wrap
         position: relative
         overflow: hidden
@@ -363,7 +348,7 @@ main
 
   // =============== Location =============== //
   section._3_location.container
-    padding: 90px 0 30px 0
+    padding: 90px 0 140px 0
     +display(flex)
     justify-content: space-between
 
@@ -376,51 +361,53 @@ main
 
       h2
         margin-bottom: 48px
-        font-size: $font48px
-        font-weight: 700
 
       p
         font-size: $font20px
-        line-height: 22px
+        line-height: $font22px
 
       p:not(:last-child)
         margin-bottom: 25px
 
-    .location__map
-      width: 550px
-      height: 520px
+    .location__map-box
+      width: 518px
+      height: 400px
       position: relative
 
-      .location__map__img,
+      img.location__map__img,
       .location__map__bg-color,
       .location__map__bg-dots
         display: block
         position: absolute
-        width: 518px
-        height: 400px
+        width: 100%
+        height: 100%
         transition: all .5s ease
 
       .location__map__img
+        bottom: 10px
+        right: 15px
         z-index: 3
 
       .location__map__bg-color
-        top: 22px
-        left: 22px
+        bottom: 0
+        right: 0
         background-color: #842231
         z-index: 2
 
       .location__map__bg-dots
-        top: 61px
-        left: 40px
+        top: 9px
+        left: 20px
         z-index: 1
+        background: url("../img/_3_location__dots.svg")
 
-      &:hover
-          .location__map__bg-color
-            transform: translate(20px, 20px)
+    .location__map-box:hover
+      .location__map__img
+        bottom: 42px
+        right: 42px
 
-
-          .location__map__bg-dots
-            transform: translate(50px, 30px)
+      .location__map__bg-dots
+        top: 56px
+        left: 43px
 
   // =============== Advantages =============== //
   section._4_advantages
@@ -431,7 +418,7 @@ main
       padding: 60px 0 80px 0
       position: relative
 
-      .advantages__dots
+      img.advantages__dots
         position: absolute
         top: -62px
         left: -270px
@@ -449,8 +436,6 @@ main
 
         h2
           margin-bottom: 40px
-          font-size: $font48px
-          font-weight: 700
 
         .advantages__imb-box
           margin-bottom: 60px
@@ -468,7 +453,7 @@ main
 
             p
               font-size: $font20px
-              line-height: 22px
+              line-height: $font22px
 
         ul:last-child
           +ul-columns(1)
@@ -483,55 +468,54 @@ main
 
     h2
       margin-bottom: 99px
-      font-size: $font48px
-      font-weight: 700
 
     .why__nura__content-box
       +display(flex)
 
       .why-nura__img-box
-        margin-right: 40px
+        margin-right: 100px
         position: relative
         width: 453px
         height: 400px
 
         img.why-nura__img,
         .why-nura__bg-color,
-        img.why-nura__bg-dots
+        .why-nura__bg-dots
           display: block
           position: absolute
           transition: all .5s ease
 
         img.why-nura__img,
-        .why-nura__bg-color
-          width: 453px
-          height: 400px
+        .why-nura__bg-color,
+        .why-nura__bg-dots
+          width: 100%
+          height: 100%
 
         img.why-nura__img
-          top: 0
-          right: 0
+          bottom: 10px
+          left: 15px
           z-index: 3
 
         .why-nura__bg-color
-          top: 17px
-          left: -17px
+          bottom: 0
+          left: 0
           z-index: 2
           background-color: #842231
 
-        img.why-nura__bg-dots
-          max-height: 397px
-          top: 43px
-          right: 33px
+        .why-nura__bg-dots
+          top: 9px
+          right: 25px
           z-index: 1
+          background: url("../img/_3_location__dots.svg")
 
-        &:hover
-          .why-nura__bg-color
-            top: 35px
-            left: -42px
+      .why-nura__img-box:hover
+        img.why-nura__img
+          bottom: 53px
+          left: 42px
 
-          img.why-nura__bg-dots
-            top: 82px
-            right: 77px
+        .why-nura__bg-dots
+          top: 35px
+          right: 65px
 
       ul:last-child
         margin-left: 15px
@@ -561,8 +545,6 @@ main
 
     h2
       margin-bottom: 43px
-      font-size: $font48px
-      font-weight: 700
       text-align: center
 
     .technologies__content-box
@@ -588,7 +570,7 @@ main
 
           p
             font-size: $font18px
-            line-height: 20px
+            line-height: $font20px
 
     .technologies__download-presentation
       padding: 70px 150px
@@ -634,8 +616,6 @@ main
 
     h2
       margin-bottom: 60px
-      font-size: $font48px
-      font-weight: 700
       text-align: center
 
     >ul
@@ -656,22 +636,20 @@ main
           font-size: 1.0625rem
           font-weight: 700
 
-    .payments__adress
+    .payments__address
       margin-top: 100px
       +display(flex)
       justify-content: space-between
 
-      .payments__adress__contacts
+      .payments__address__contacts
         h2
-          font-size: $font48px
-          font-weight: 700
           margin-bottom: 30px
 
         p
           margin-bottom: 30px
           font-size: $font18px
 
-        .payments__adress__contacts-box
+        .payments__address__contacts-box
           +display(flex)
           justify-content: space-between
 
@@ -702,7 +680,7 @@ footer
       li
         a
           font-size: $font18px
-          line-height: 22px
+          line-height: $font22px
 
       li:not(:last-child)
         margin-right: 60px
