@@ -15,7 +15,7 @@
 
 //Responsive
 @mixin media_desktop ()
-  @media (max-width: $breakpoint_lg)
+  @media (max-width: $breakpoint_xl)
     @content
 
 @mixin media_laptop ()
@@ -32,4 +32,8 @@
 
 @mixin media_mobile ()
   @media (max-width: $breakpoint_xs)
+    @content
+
+@mixin media_mobile-xxs ()
+  @media (max-width: $breakpoint_xxs)
     @content

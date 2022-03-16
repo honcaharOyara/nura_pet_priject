@@ -1,0 +1,36 @@
+@include media_desktop
+  main
+    section._2_slider
+      .container
+        .slider__wrap
+          .slider__slides
+            .slider__box
+              .slider__box__inner
+                display: initial
+
+                img:first-child
+                  margin-bottom: 40px
+
+                img:last-child
+                  margin-right: auto
+
+@include media_tablet
+  main
+    section._2_slider
+      .container
+        .slider__wrap
+          .slider__slides
+            .slider__box
+              .slider__box__inner
+                display: initial
+
+                img:first-child
+                  max-width: 90%
+
+                img:last-child
+                  max-width: 90%
+
+@include media_tablet-mobile
+  main
+    section._2_slider
+      display: none
