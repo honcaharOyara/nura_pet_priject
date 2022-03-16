@@ -1,0 +1,80 @@
+main
+  section._5_why-nura.container
+    padding-top: 99px
+    margin-bottom: 34px
+
+    h2
+      margin-bottom: 99px
+
+    .why__nura__content-box
+      +display(flex)
+
+      .why-nura__img-box
+        margin-right: 100px
+        position: relative
+        width: 453px
+        height: 400px
+
+        img.why-nura__img,
+        .why-nura__bg-color,
+        .why-nura__bg-dots
+          display: block
+          position: absolute
+          transition: all .5s ease
+
+        img.why-nura__img,
+        .why-nura__bg-color,
+        .why-nura__bg-dots
+          width: 100%
+          height: 100%
+
+        img.why-nura__img
+          bottom: 10px
+          left: 15px
+          z-index: 3
+
+        .why-nura__bg-color
+          bottom: 0
+          left: 0
+          z-index: 2
+          background-color: #842231
+
+        .why-nura__bg-dots
+          top: 9px
+          right: 25px
+          z-index: 1
+          background: url("../img/3_location__dots.svg")
+
+      .why-nura__img-box:hover
+        img.why-nura__img
+          bottom: 53px
+          left: 42px
+
+        .why-nura__bg-dots
+          top: 35px
+          right: 65px
+
+      ul:last-child
+        margin-left: 15px
+
+      ul
+        padding: 86px 0 124px 0
+        max-width: 336px
+
+        li
+          +display(flex)
+          margin-bottom: 40px
+
+          div
+            +display(flex)
+            margin-right: 15px
+            justify-items: start
+            height: 100%
+
+          span
+            b,
+            p
+              font-size: $font18px
+
+            p:last-child
+              margin-top: 20px

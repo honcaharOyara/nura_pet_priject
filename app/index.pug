@@ -4,7 +4,6 @@ head
     meta(name='viewport' content='width=device-width, initial-scale = 1')
     title Nura elite
     link(rel="icon" type="image/x-icon" href="./img/favicon.png")
-    link(rel='stylesheet' href='./css/nullstyle.css')
     link(rel='stylesheet' href='./css/main.css')
 
 body
@@ -163,23 +162,27 @@ body
                     .why-nura__bg-dots
                 ul
                     li
-                        img(src="./img/5_why-nura_icon-lightning.svg")
+                        div
+                            img(src="./img/5_why-nura_icon-lightning.svg")
                         span
                             b Energy efficiency
                             p Houses keep warm in winter and cool in summer
                     li
-                        img(src="./img/4_advantages_icon-protection.svg")
+                        div
+                            img(src="./img/4_advantages_icon-protection.svg")
                         span
                             b Security
                             p Closed campus with round-the-clock video surveillance
                 ul
                     li
-                        img(src="./img/5_why-nura_icon-hends.svg")
+                        div
+                            img(src="./img/5_why-nura_icon-hends.svg")
                         span
                             b Ecologically clean area
                             p The town is located near the forest belt and the village of Nura-Yesil
                     li
-                        img(src="./img/5_why-nura_icon-tear.svg")
+                        div
+                            img(src="./img/5_why-nura_icon-tear.svg")
                         span
                             b Communications
                             p Centralized water supply, power supply and sewerage.
@@ -224,6 +227,8 @@ body
                     input(type="text" placeholder="Your name")
                     input(type="tel" placeholder="Phone number")
                     input(type="submit")
+            .technologies__bg-logo
+                img(src="./img/bg-logo__cherry.svg")
 
         section._7_payments.container
             h2.h2-title Payment methods

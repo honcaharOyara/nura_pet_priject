@@ -1,0 +1,35 @@
+=display($property)
+  display: -webkit-$property
+  display: -ms-$property
+  display: $property
+
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+=ul-columns($property)
+  -moz-column-count: $property
+  -webkit-column-count: $property
+  column-count: $property
+
+//Responsive
+@mixin media_desktop ()
+  @media (max-width: $breakpoint_lg)
+    @content
+
+@mixin media_laptop ()
+  @media (max-width: $breakpoint_lg)
+    @content
+
+@mixin media_tablet ()
+  @media (max-width: $breakpoint_md)
+    @content
+
+@mixin media_tablet-mobile ()
+  @media (max-width: $breakpoint_sm)
+    @content
+
+@mixin media_mobile ()
+  @media (max-width: $breakpoint_xs)
+    @content

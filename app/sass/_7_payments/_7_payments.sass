@@ -1,0 +1,60 @@
+main
+  section._7_payments.container
+    padding-top: 131px
+    margin-bottom: 56px
+
+    h2
+      margin-bottom: 60px
+      text-align: center
+
+    >ul
+      margin: 0 auto
+      +display(flex)
+      justify-content: space-between
+      max-width: 883px
+      width: 100%
+      text-align: center
+
+      li
+        img
+          max-height: 80px
+          height: 100%
+          margin-bottom: 15px
+
+        p
+          font-size: 1.0625rem
+          font-weight: 700
+
+    .payments__address
+      margin-top: 100px
+      +display(flex)
+      justify-content: space-between
+
+      .payments__address__contacts
+        h2
+          margin-bottom: 30px
+
+        p
+          margin-bottom: 30px
+          font-size: $font18px
+
+        .payments__address__contacts-box
+          +display(flex)
+          justify-content: space-between
+
+          ul
+            margin-top: 3px
+            li
+              +display(flex)
+
+              img
+                margin-right: 12px
+
+            li:not(:last-child)
+              margin-bottom: 10px
+
+  .technologies__bg-logo
+    position: absolute
+    bottom: -284px
+    right: -43px
+    z-index: -1

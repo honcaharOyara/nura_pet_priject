@@ -1,0 +1,51 @@
+main
+  section._4_advantages
+    position: relative
+
+    .container
+      max-width: 900px
+      padding: 60px 0 80px 0
+      position: relative
+
+      img.advantages__dots
+        position: absolute
+        top: -62px
+        left: -270px
+        z-index: 0
+
+      .advantages__bg
+        position: absolute
+        top: -4px
+        left: -270px
+        z-index: 1
+
+      .advantages__content-box
+        position: relative
+        z-index: 2
+
+        h2
+          margin-bottom: 40px
+
+        .advantages__imb-box
+          margin-bottom: 60px
+
+        ul
+          +ul-columns(2)
+
+          li
+            margin: 0 60px 50px 0
+            +display(flex)
+
+            img
+              margin-right: 15px
+
+
+            p
+              font-size: $font20px
+              line-height: $font22px
+
+        ul:last-child
+          +ul-columns(1)
+
+          li:last-child
+            width: 100%

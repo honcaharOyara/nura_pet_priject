@@ -1,0 +1,62 @@
+main
+  section._3_location.container
+    padding: 90px 0 140px 0
+    +display(flex)
+    justify-content: space-between
+
+    .location__content,
+    .location__map
+      max-width: 550px
+
+    .location__content
+      padding-top: 90px
+
+      h2
+        margin-bottom: 48px
+
+      p
+        font-size: $font20px
+        line-height: $font22px
+
+      p:not(:last-child)
+        margin-bottom: 25px
+
+    .location__map-box
+      width: 518px
+      height: 400px
+      position: relative
+
+      img.location__map__img,
+      .location__map__bg-color,
+      .location__map__bg-dots
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        transition: all .5s ease
+
+      .location__map__img
+        bottom: 10px
+        right: 15px
+        z-index: 3
+
+      .location__map__bg-color
+        bottom: 0
+        right: 0
+        background-color: #842231
+        z-index: 2
+
+      .location__map__bg-dots
+        top: 9px
+        left: 20px
+        z-index: 1
+        background: url("../img/3_location__dots.svg")
+
+    .location__map-box:hover
+      .location__map__img
+        bottom: 42px
+        right: 42px
+
+      .location__map__bg-dots
+        top: 56px
+        left: 43px
