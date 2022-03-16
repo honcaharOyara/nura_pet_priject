@@ -1,0 +1,51 @@
+@include media_desktop
+  main
+    section._5_why-nura
+      padding: 60px 0 40px 0
+
+      .container
+        h2
+          margin-bottom: 40px
+
+        .why-nura__content-box
+          display: initial
+
+          .why-nura__img-box
+            padding-bottom: 40px
+            width: 100%
+            height: initial
+
+            img.why-nura__img
+              position: initial
+              max-width: 100%
+              max-height: initial
+              height: initial
+
+            .why-nura__bg-color,
+            .why-nura__bg-dots
+              display: none
+
+          .why-nura__content-box__inner
+            ul
+              padding: 0
+              max-width: 50%
+
+@include media_tablet-mobile
+  main
+    section._5_why-nura
+      padding: 20px 0 40px 0
+
+      .container
+        .why-nura__content-box
+          .why-nura__content-box__inner
+            display: initial
+
+            ul
+              max-width: 100%
+
+            ul:first-child,
+            ul:last-child
+              margin: 0
+              padding: 0
+
+@include media_mobile

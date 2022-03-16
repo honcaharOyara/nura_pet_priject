@@ -1,55 +1,57 @@
 @include media_desktop
   main
-    section._1_about-project.container
-      padding: 127px 20px 52px 20px
-      .about-project__wrap
-        .about-project__wrap-inner:first-child
-          margin-right: 30px
+    section._1_about-project
+      padding: 40px 0 52px 0
 
-        .about-project__wrap-inner:last-child
-          .about-project__company-logo__box
-            img.about-project__company-logo__img
-              bottom: 0
-              right: 0
+      .container
+        .about-project__wrap
+          .about-project__wrap-inner:first-child
+            margin-right: 30px
 
-            img.about-project__company-logo__img,
-            .about-project__company-logo__bg-color,
-            .about-project__company-logo__bg-dots
-              height: initial
+          .about-project__wrap-inner:last-child
+            .about-project__company-logo__box
+              img.about-project__company-logo__img
+                bottom: 0
+                right: 0
 
-            .about-project__company-logo__bg-color,
-            .about-project__company-logo__bg-dots
-              display: none
+              img.about-project__company-logo__img,
+              .about-project__company-logo__bg-color,
+              .about-project__company-logo__bg-dots
+                height: initial
 
-        .about-project__wrap-inner:last-child
-          .about-project__company-logo__box:hover
-            img.about-project__company-logo__img
-              bottom: 0
-              right: 0
+              .about-project__company-logo__bg-color,
+              .about-project__company-logo__bg-dots
+                display: none
+
+          .about-project__wrap-inner:last-child
+            .about-project__company-logo__box:hover
+              img.about-project__company-logo__img
+                bottom: 0
+                right: 0
 
 @include media_tablet
   main
-    section._1_about-project.container
+    section._1_about-project
+      .container
 
-      .about-project__wrap
-        display: initial
+        .about-project__wrap
+          display: initial
 
-        .about-project__wrap-inner:first-child
-          margin: 0 0 40px 0
+          .about-project__wrap-inner:first-child
+            margin: 0 0 40px 0
 
-          .about-project__about-company
-           margin-top: 40px
+            .about-project__about-company
+             margin-top: 40px
 
-        .about-project__wrap-inner:last-child
-          max-width: 100%
+          .about-project__wrap-inner:last-child
+            max-width: 100%
 
-          .about-project__company-logo__box
-            margin: 0 auto 40px auto
-            max-width: 80%
-            max-height: initial
+            .about-project__company-logo__box
+              margin: 0 auto 40px auto
+              max-width: 80%
+              max-height: initial
 
-            img.about-project__company-logo__img,
-            .about-project__company-logo__bg-color,
-            .about-project__company-logo__bg-dots
-              position: initial
-
+              img.about-project__company-logo__img,
+              .about-project__company-logo__bg-color,
+              .about-project__company-logo__bg-dots
+                position: initial

@@ -1,28 +1,33 @@
 @include media_desktop
   main
-    section._3_location.container
-      .location__content
-        margin-right: 25px
+    section._3_location
+      padding: 40px 0 0 0
 
-      .location__map-box
-        img.location__map__img
-          position: initial
+      .container
+        .location__content
+          margin-right: 25px
+          padding: 0 20px 0 20px
 
-        .location__map__bg-color,
-        .location__map__bg-dots
-          display: none
+        .location__map-box
+          img.location__map__img
+            position: initial
+
+          .location__map__bg-color,
+          .location__map__bg-dots
+            display: none
 
 @include media_laptop
   main
-    section._3_location.container
-      display: initial
+    section._3_location
+      .container
+        display: initial
 
-      .location__content
-        max-width: 100%
-        margin-bottom: 25px
+        .location__content
+          max-width: 100%
+          margin: 0 0 25px 0
 
-      .location__map-box
-        margin: 0 auto
-        max-width: 100%
-        max-height: initial
-        height: initial
+        .location__map-box
+          margin: 0 auto
+          max-width: 100%
+          max-height: initial
+          height: initial

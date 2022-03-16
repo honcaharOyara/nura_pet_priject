@@ -1,33 +1,43 @@
 main
   section._4_advantages
+    padding: 40px 0 80px 0
     position: relative
+    overflow: hidden
 
     .container
       max-width: 900px
-      padding: 60px 0 80px 0
       position: relative
 
+
       img.advantages__dots
+        display: block
+        max-width: 1114px
+        width: 80%
         position: absolute
         top: -62px
         left: -270px
         z-index: 0
 
-      .advantages__bg
+      img.advantages__bg
         position: absolute
         top: -4px
         left: -270px
         z-index: 1
 
       .advantages__content-box
+        padding-top: 60px
         position: relative
         z-index: 2
 
         h2
           margin-bottom: 40px
 
-        .advantages__imb-box
+        .advantages__img-box
           margin-bottom: 60px
+
+          img
+            max-width: 900px
+            width: 100%
 
         ul
           +ul-columns(2)
@@ -36,8 +46,10 @@ main
             margin: 0 60px 50px 0
             +display(flex)
 
-            img
+            div
               margin-right: 15px
+              +display(flex)
+              align-items: start
 
 
             p

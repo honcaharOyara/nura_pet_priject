@@ -1,0 +1,35 @@
+@include media_desktop
+  main
+    section._4_advantages
+      padding: 50px 0 40px 0
+
+@include media_laptop
+
+
+@include media_tablet
+  main
+    section._4_advantages
+      .container
+        .advantages__content-box
+          padding-top: 20px
+
+          ul
+            li
+              margin: 0 20px 30px 0
+
+          .advantages__img-box
+            margin-bottom: 30px
+
+@include media_tablet-mobile
+  main
+    section._4_advantages
+      .container
+        img.advantages__dots,
+        img.advantages__bg
+          display: none
+
+        .advantages__content-box
+          ul
+            +ul-columns(1)
+
+@include media_mobile

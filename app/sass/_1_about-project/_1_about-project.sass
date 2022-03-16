@@ -1,72 +1,73 @@
 main
-  section._1_about-project.container
+  section._1_about-project
     padding: 127px 0 52px 0
 
-    .about-project__wrap
-      +display(flex)
-      justify-content: space-between
+    .container
+      .about-project__wrap
+        +display(flex)
+        justify-content: space-between
 
-      .about-project__wrap-inner
-        .about-project__about-company
+        .about-project__wrap-inner
+          .about-project__about-company
 
-          h3
-            font-size: $font20px
-            font-weight: 700
+            h3
+              font-size: $font20px
+              font-weight: 700
 
-          p
-            font-size: $font20px
-            line-height: $font22px
+            p
+              font-size: $font20px
+              line-height: $font22px
 
-      .about-project__wrap-inner:first-child
-        max-width: 680px
-        width: 100%
-
-        .about-project__about-company
-          margin-top: 70px
-
-      .about-project__wrap-inner:last-child
-        max-width: 440px
-        width: 100%
-
-        .about-project__company-logo__box
-          margin-bottom: 90px
-          max-width: 442px
-          max-height: 418px
+        .about-project__wrap-inner:first-child
+          max-width: 680px
           width: 100%
-          height: 100%
-          position: relative
 
-          img.about-project__company-logo__img,
-          .about-project__company-logo__bg-color,
-          .about-project__company-logo__bg-dots
-            display: block
-            position: absolute
+          .about-project__about-company
+            margin-top: 70px
+
+        .about-project__wrap-inner:last-child
+          max-width: 440px
+          width: 100%
+
+          .about-project__company-logo__box
+            margin-bottom: 90px
+            max-width: 442px
+            max-height: 418px
             width: 100%
             height: 100%
-            transition: all .5s ease
+            position: relative
 
-          img.about-project__company-logo__img
-            bottom: 15px
-            right: 15px
-            z-index: 3
+            img.about-project__company-logo__img,
+            .about-project__company-logo__bg-color,
+            .about-project__company-logo__bg-dots
+              display: block
+              position: absolute
+              width: 100%
+              height: 100%
+              transition: all .5s ease
 
-          .about-project__company-logo__bg-color
-            bottom: 0
-            right: 0
-            z-index: 2
-            background-color: #842231
+            img.about-project__company-logo__img
+              bottom: 15px
+              right: 15px
+              z-index: 3
 
-          .about-project__company-logo__bg-dots
-            top: 16px
-            left: 20px
-            z-index: 1
-            background: url("../img/3_location__dots.svg")
+            .about-project__company-logo__bg-color
+              bottom: 0
+              right: 0
+              z-index: 2
+              background-color: #842231
 
-        .about-project__company-logo__box:hover
-          img.about-project__company-logo__img
-            bottom: 33px
-            right: 42px
+            .about-project__company-logo__bg-dots
+              top: 16px
+              left: 20px
+              z-index: 1
+              background: url("../img/3_location__dots.svg")
 
-          .about-project__company-logo__bg-dots
-            top: 40px
-            left: 40px
+          .about-project__company-logo__box:hover
+            img.about-project__company-logo__img
+              bottom: 33px
+              right: 42px
+
+            .about-project__company-logo__bg-dots
+              top: 40px
+              left: 40px
