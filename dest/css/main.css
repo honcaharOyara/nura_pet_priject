@@ -936,6 +936,16 @@ main section._1_about-project .container .about-project__wrap .about-project__wr
     position: initial;
   }
 }
+@media (max-width: 480px) {
+  main section._1_about-project .container .about-project__wrap .about-project__wrap-inner:last-child .about-project__company-logo__box {
+    margin: 0 -5% 40px -5%;
+    max-width: initial;
+    width: 109.6%;
+  }
+  main section._1_about-project .container .about-project__wrap .about-project__wrap-inner:last-child .about-project__company-logo__box img.about-project__company-logo__img {
+    width: 100%;
+  }
+}
 @media (max-width: 1140px) {
   main section._2_slider .container .slider__wrap .slider__slides .slider__box .slider__box__inner {
     display: initial;
