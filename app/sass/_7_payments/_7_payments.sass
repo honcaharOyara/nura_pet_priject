@@ -1,60 +1,74 @@
 main
-  section._7_payments.container
+  section._7_payments
     padding-top: 131px
-    margin-bottom: 56px
 
-    h2
-      margin-bottom: 60px
-      text-align: center
+    .container
+      margin-bottom: 56px
 
-    >ul
-      margin: 0 auto
-      +display(flex)
-      justify-content: space-between
-      max-width: 883px
-      width: 100%
-      text-align: center
+      h2
+        margin-bottom: 60px
+        text-align: center
 
-      li
-        img
-          max-height: 80px
-          height: 100%
-          margin-bottom: 15px
+      >ul
+        margin: 0 auto
+        +display(flex)
+        justify-content: space-between
+        max-width: 883px
+        width: 100%
+        text-align: center
 
-        p
-          font-size: 1.0625rem
-          font-weight: 700
+        li
+          img
+            margin-bottom: 15px
 
-    .payments__address
-      margin-top: 100px
-      +display(flex)
-      justify-content: space-between
+          img.payments_icon-1
+            max-width: 124px
+            width: 100%
 
-      .payments__address__contacts
-        h2
-          margin-bottom: 30px
+          img.payments_icon-2
+            max-width: 87px
+            width: 100%
 
-        p
-          margin-bottom: 30px
-          font-size: $font18px
+          img.payments_icon-3
+            max-width: 69px
+            width: 100%
 
-        .payments__address__contacts-box
-          +display(flex)
-          justify-content: space-between
+          img.payments_icon-4
+            max-width: 80px
+            width: 100%
 
-          ul
-            margin-top: 3px
-            li
-              +display(flex)
 
-              img
-                margin-right: 12px
+          p
+            font-size: 1.0625rem
+            font-weight: 700
 
-            li:not(:last-child)
-              margin-bottom: 10px
+      .payments__address
+        margin-top: 100px
+        +display(flex)
+        justify-content: space-between
 
-  .technologies__bg-logo
-    position: absolute
-    bottom: -284px
-    right: -43px
-    z-index: -1
+        .payments__address__map
+          margin-right: 20px
+
+        .payments__address__contacts
+          h2
+            margin-bottom: 30px
+
+          p
+            margin-bottom: 30px
+            font-size: $font18px
+
+          .payments__address__contacts-box
+            +display(flex)
+            justify-content: space-between
+
+            ul
+              margin-top: 3px
+              li
+                +display(flex)
+
+                img
+                  margin-right: 12px
+
+              li:not(:last-child)
+                margin-bottom: 10px

@@ -633,62 +633,85 @@ main section._5_why-nura .container .why-nura__content-box .why-nura__content-bo
   margin-top: 20px;
 }
 
-main section._6_technologies.container {
+main section._6_technologies {
   padding-top: 127px;
+}
+main section._6_technologies .container {
   position: relative;
   z-index: 2;
 }
-main section._6_technologies.container h2 {
+main section._6_technologies .container h2 {
   margin-bottom: 43px;
   text-align: center;
 }
-main section._6_technologies.container .technologies__content-box {
+main section._6_technologies .container .technologies__content-box {
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
   justify-content: space-between;
 }
-main section._6_technologies.container .technologies__content-box ul:last-child {
+main section._6_technologies .container .technologies__content-box ul:first-child {
+  margin-right: 20px;
+}
+main section._6_technologies .container .technologies__content-box ul:last-child {
   margin-top: 55px;
 }
-main section._6_technologies.container .technologies__content-box ul {
-  max-width: 500px;
+main section._6_technologies .container .technologies__content-box ul {
+  max-width: 50%;
+  width: 100%;
 }
-main section._6_technologies.container .technologies__content-box ul li {
+main section._6_technologies .container .technologies__content-box ul li {
   margin-bottom: 80px;
 }
-main section._6_technologies.container .technologies__content-box ul li img {
+main section._6_technologies .container .technologies__content-box ul li img {
+  width: 100%;
   margin-bottom: 32px;
 }
-main section._6_technologies.container .technologies__content-box ul li h3 {
+main section._6_technologies .container .technologies__content-box ul li img.technology_img-1 {
+  max-width: 188px;
+}
+main section._6_technologies .container .technologies__content-box ul li img.technology_img-3 {
+  max-width: 216px;
+}
+main section._6_technologies .container .technologies__content-box ul li img.technology_img-5 {
+  max-width: 322px;
+}
+main section._6_technologies .container .technologies__content-box ul li img.technology_img-2 {
+  max-width: 230px;
+}
+main section._6_technologies .container .technologies__content-box ul li img.technology_img-4,
+main section._6_technologies .container .technologies__content-box ul li img.technology_img-6 {
+  max-width: 339px;
+}
+main section._6_technologies .container .technologies__content-box ul li h3 {
   margin-bottom: 12px;
   font-size: 1.25rem;
   font-weight: 700;
 }
-main section._6_technologies.container .technologies__content-box ul li p {
+main section._6_technologies .container .technologies__content-box ul li p {
   font-size: 1.125rem;
   line-height: 1.25rem;
 }
-main section._6_technologies.container .technologies__download-presentation {
+main section._6_technologies .container .technologies__download-presentation {
   padding: 70px 150px;
   border: 8px #842231 solid;
   border-radius: 8px;
 }
-main section._6_technologies.container .technologies__download-presentation h2 {
+main section._6_technologies .container .technologies__download-presentation h2 {
   margin-bottom: 12px;
 }
-main section._6_technologies.container .technologies__download-presentation p {
+main section._6_technologies .container .technologies__download-presentation p {
   margin-bottom: 36px;
   font-size: 1.3125rem;
   font-weight: 400;
   text-align: center;
 }
-main section._6_technologies.container .technologies__download-presentation form {
+main section._6_technologies .container .technologies__download-presentation form {
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
 }
-main section._6_technologies.container .technologies__download-presentation form input {
+main section._6_technologies .container .technologies__download-presentation form input {
   padding: 32px 0 32px 58px;
   max-width: 280px;
   width: 100%;
@@ -696,10 +719,10 @@ main section._6_technologies.container .technologies__download-presentation form
   background-color: #E5E5E5;
   border-radius: 8px;
 }
-main section._6_technologies.container .technologies__download-presentation form input:not(:last-child) {
+main section._6_technologies .container .technologies__download-presentation form input:not(:last-child) {
   margin-right: 20px;
 }
-main section._6_technologies.container .technologies__download-presentation form input:last-child {
+main section._6_technologies .container .technologies__download-presentation form input:last-child {
   padding: 32px 0;
   font-size: 1.125rem;
   font-weight: 500;
@@ -707,16 +730,24 @@ main section._6_technologies.container .technologies__download-presentation form
   background-color: #842231;
   cursor: pointer;
 }
+main .technologies__bg-logo {
+  position: absolute;
+  bottom: -284px;
+  right: -43px;
+  z-index: -1;
+}
 
-main section._7_payments.container {
+main section._7_payments {
   padding-top: 131px;
+}
+main section._7_payments .container {
   margin-bottom: 56px;
 }
-main section._7_payments.container h2 {
+main section._7_payments .container h2 {
   margin-bottom: 60px;
   text-align: center;
 }
-main section._7_payments.container > ul {
+main section._7_payments .container > ul {
   margin: 0 auto;
   display: -webkit- flex;
   display: -ms- flex;
@@ -726,54 +757,65 @@ main section._7_payments.container > ul {
   width: 100%;
   text-align: center;
 }
-main section._7_payments.container > ul li img {
-  max-height: 80px;
-  height: 100%;
+main section._7_payments .container > ul li img {
   margin-bottom: 15px;
 }
-main section._7_payments.container > ul li p {
+main section._7_payments .container > ul li img.payments_icon-1 {
+  max-width: 124px;
+  width: 100%;
+}
+main section._7_payments .container > ul li img.payments_icon-2 {
+  max-width: 87px;
+  width: 100%;
+}
+main section._7_payments .container > ul li img.payments_icon-3 {
+  max-width: 69px;
+  width: 100%;
+}
+main section._7_payments .container > ul li img.payments_icon-4 {
+  max-width: 80px;
+  width: 100%;
+}
+main section._7_payments .container > ul li p {
   font-size: 1.0625rem;
   font-weight: 700;
 }
-main section._7_payments.container .payments__address {
+main section._7_payments .container .payments__address {
   margin-top: 100px;
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
   justify-content: space-between;
 }
-main section._7_payments.container .payments__address .payments__address__contacts h2 {
+main section._7_payments .container .payments__address .payments__address__map {
+  margin-right: 20px;
+}
+main section._7_payments .container .payments__address .payments__address__contacts h2 {
   margin-bottom: 30px;
 }
-main section._7_payments.container .payments__address .payments__address__contacts p {
+main section._7_payments .container .payments__address .payments__address__contacts p {
   margin-bottom: 30px;
   font-size: 1.125rem;
 }
-main section._7_payments.container .payments__address .payments__address__contacts .payments__address__contacts-box {
+main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box {
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
   justify-content: space-between;
 }
-main section._7_payments.container .payments__address .payments__address__contacts .payments__address__contacts-box ul {
+main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box ul {
   margin-top: 3px;
 }
-main section._7_payments.container .payments__address .payments__address__contacts .payments__address__contacts-box ul li {
+main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box ul li {
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
 }
-main section._7_payments.container .payments__address .payments__address__contacts .payments__address__contacts-box ul li img {
+main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box ul li img {
   margin-right: 12px;
 }
-main section._7_payments.container .payments__address .payments__address__contacts .payments__address__contacts-box ul li:not(:last-child) {
+main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box ul li:not(:last-child) {
   margin-bottom: 10px;
-}
-main .technologies__bg-logo {
-  position: absolute;
-  bottom: -284px;
-  right: -43px;
-  z-index: -1;
 }
 
 footer {
@@ -986,9 +1028,6 @@ main section._4_advantages .container img.advantages__bg {
   main section._5_why-nura .container h2 {
     margin-bottom: 40px;
   }
-  main section._5_why-nura .container .why-nura__content-box {
-    display: initial;
-  }
   main section._5_why-nura .container .why-nura__content-box .why-nura__img-box {
     padding-bottom: 40px;
     width: 100%;
@@ -1009,6 +1048,11 @@ main section._5_why-nura .container .why-nura__content-box .why-nura__img-box .w
     max-width: 50%;
   }
 }
+@media (max-width: 1024px) {
+  main section._5_why-nura .container .why-nura__content-box {
+    display: initial;
+  }
+}
 @media (max-width: 576px) {
   main section._5_why-nura {
     padding: 20px 0 40px 0;
@@ -1023,5 +1067,95 @@ main section._5_why-nura .container .why-nura__content-box .why-nura__img-box .w
 main section._5_why-nura .container .why-nura__content-box .why-nura__content-box__inner ul:last-child {
     margin: 0;
     padding: 0;
+  }
+}
+@media (max-width: 1140px) {
+  main section._6_technologies {
+    padding-top: 20px;
+  }
+  main section._6_technologies .container .technologies__download-presentation {
+    padding: 70px 70px;
+  }
+  main section._6_technologies .container .technologies__bg-logo {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  main section._6_technologies .container .technologies__content-box {
+    display: initial;
+  }
+  main section._6_technologies .container .technologies__content-box ul {
+    max-width: 100%;
+  }
+  main section._6_technologies .container .technologies__content-box ul li {
+    margin-bottom: 40px;
+  }
+  main section._6_technologies .container .technologies__download-presentation {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  main section._7_payments .container > ul {
+    margin-bottom: 20px;
+  }
+  main section._7_payments .container .payments__address {
+    display: initial;
+  }
+  main section._7_payments .container .payments__address .payments__address__map {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+  main section._7_payments .container .payments__address .payments__address__contacts {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box ul {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  main section._7_payments {
+    padding-top: 60px;
+  }
+  main section._7_payments .container > ul {
+    flex-wrap: wrap;
+  }
+  main section._7_payments .container > ul li {
+    width: 50%;
+  }
+  main section._7_payments .container .payments__address {
+    max-width: 100%;
+    width: 100%;
+  }
+  main section._7_payments .container .payments__address .payments__address__map {
+    display: none;
+  }
+  main section._7_payments .container .payments__address .payments__address__contacts {
+    margin: 0 auto;
+  }
+  main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box {
+    display: -webkit- flex;
+    display: -ms- flex;
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  main section._7_payments .container > ul li {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box {
+    display: initial;
+  }
+  main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    display: none;
   }
 }
