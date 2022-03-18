@@ -1,43 +1,47 @@
 @include media_laptop
   header
-    nav.container
-      .header__navigation
-        .header__navigation__nav_menu
-          ul
-            li
-              margin-left: 13px
+    nav
+      .container
+        .header__navigation
+          .header__navigation__nav_menu
+            ul
+              li
+                margin-left: 13px
 
 @include media_tablet
   header
     padding-top: 50px
-    nav.container
+    nav
       display: none
-    section.header__banner.container
-      display: initial
-      .header__banner__info
-        h1,
-        h3
+
+    section.header__banner
+      .container
+        display: initial
+        .header__banner__info
+          h1,
+          h3
+            text-align: center
+          a
+            display: none
+          .header__banner__info__box
+            justify-content: center
+        .header__banner__deadlines
+          max-width: 100%
           text-align: center
-        a
-          display: none
-        .header__banner__info__box
-          justify-content: center
-      .header__banner__deadlines
-        max-width: 100%
-        text-align: center
 
 @include media_tablet-mobile
   header
-    section.header__banner.container
-      .header__banner__info
-        .header__banner__info__box
-          justify-content: space-evenly
-          margin-bottom: 30px
-          div
-            flex-direction: column
-            text-align: center
-            div:first-child
-              margin: 0
+    section.header__banner
+      .container
+        .header__banner__info
+          .header__banner__info__box
+            justify-content: space-evenly
+            margin-bottom: 30px
+            div
+              flex-direction: column
+              text-align: center
+              div:first-child
+                margin: 0
 
 @include media_mobile-xxs
   header
