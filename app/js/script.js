@@ -70,15 +70,23 @@ modalWindowBg.addEventListener('click', function () {
 const burgerMenuBtnOpen = document.querySelector('body .burger-menu__btn-open')
 const burgerMenuBtnClose = document.querySelector('body .burger-menu .burger-menu__wrap .burger-menu__btn-close')
 const burgerMenu = document.querySelector('.burger-menu')
+const burgerMenuWrap = document.querySelector('.burger-menu__wrap')
 
-burgerMenuBtnOpen.addEventListener('click', function (e) {
+burgerMenuBtnOpen.addEventListener('click', openBurger)
+
+burgerMenuBtnClose.addEventListener('click', closeBurger)
+
+function openBurger() {
     burgerMenu.classList.add('open')
     burgerMenuBtnOpen.classList.add('hide-burger-menu__btn')
     body.style.overflowY = 'hidden'
-})
 
-burgerMenuBtnClose.addEventListener('click', function (e) {
+    burgerMenuWrap.addEventListener('click', e => e.stopPropagation())
+    burgerMenu.addEventListener('click', closeBurger)
+}
+
+function closeBurger() {
     burgerMenu.classList.remove('open')
     burgerMenuBtnOpen.classList.remove('hide-burger-menu__btn')
     body.style.overflowY = 'initial'
-})
+}
