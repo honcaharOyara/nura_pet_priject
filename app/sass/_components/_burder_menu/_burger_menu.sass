@@ -1,0 +1,190 @@
+body
+  .burger-menu
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 6
+    background-color: rgba(0, 0, 0, 0.5)
+    overflow-x: hidden
+    overflow-y: auto
+    opacity: 0
+    visibility: hidden
+    transition: all .5s ease
+
+    .burger-menu__wrap
+      position: absolute
+      top: 0
+      right: -50%
+      width: 50%
+      height: 100%
+      background-image: url("../img/bg-logo__cherry.svg")
+      background-position: right bottom
+      background-repeat: no-repeat
+      background-size: 70%
+      background-color: #fff
+      transition: all .5s ease
+
+
+      .burger-menu__btn-close
+        position: absolute
+        top: 15px
+        right: 103%
+        width: 50px
+        height: 30px
+
+        .burger-menu__btn-close__inner
+          position: absolute
+          top: 50%
+          left: 0
+          width: 100%
+          height: 6px
+          border: 3px #dba069 solid
+          border-radius: 10px
+          transform: translateY(-50%)
+
+      .burger-menu__btn-close:before,
+      .burger-menu__btn-close:after
+        content: ''
+        position: absolute
+        left: 0
+        width: 100%
+        height: 6px
+        border: 3px #dba069 solid
+        border-radius: 10px
+
+      .burger-menu__btn-close:before
+        top: 0
+
+      .burger-menu__btn-close:after
+        bottom: 0
+
+      .burger-menu__content
+        height: 100%
+        +display(flex)
+        flex-direction: column
+        justify-content: space-between
+
+        ul
+          padding: 50px 0 0 50px
+
+          li
+            padding-bottom: 20px
+
+        a
+          font-size: $font22px
+          font-weight: 700
+          color: #333333
+
+        > a
+          display: block
+          margin: 0 auto 30px auto
+          max-width: 300px
+          padding: 10px 20px
+          color: #ffffff
+          background-color: #dba069
+
+        ul li:active,
+        a:active
+          transform: scale(.98)
+
+body
+  .burger-menu.open
+    opacity: 1
+    visibility: visible
+
+    .burger-menu__wrap
+      right: 0
+
+body
+  .burger-menu__btn-open
+    position: absolute
+    top: 15px
+    right: 15px
+    width: 50px
+    height: 30px
+    opacity: 0
+    visibility: hidden
+
+    .burger-menu__btn-open__inner
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      height: 6px
+      border: 3px #dba069 solid
+      border-radius: 10px
+      transform: translateY(-50%)
+
+  .burger-menu__btn-open:before,
+  .burger-menu__btn-open:after
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+    height: 6px
+    border: 3px #dba069 solid
+    border-radius: 10px
+
+  .burger-menu__btn-open:before
+    top: 0
+
+  .burger-menu__btn-open:after
+    bottom: 0
+
+  .burger-menu__btn-open.hide-burger-menu__btn
+    opacity: 0
+    visibility: hidden
+
+@include media_tablet
+  body
+    .burger-menu__btn-open
+      opacity: 1
+      visibility: visible
+
+@include media_tablet-mobile
+  body
+    .burger-menu.open
+      .burger-menu__wrap
+        .burger-menu__content
+          > a
+            font-size: $font18px
+
+@include media_mobile
+  body
+    .burger-menu.open
+      .burger-menu__wrap
+        width: 60%
+
+        .burger-menu__content
+          ul
+            li
+              a
+                font-size: $font18px
+
+          > a
+            font-size: 1rem
+
+@include media_mobile-xxs
+  body
+    .burger-menu.open
+      .burger-menu__wrap
+        width: 100%
+
+        .burger-menu__btn-close
+          top: 15px
+          left: 15px
+
+        .burger-menu__content
+          ul
+            padding: 100px 0 0 50px
+
+            li
+              margin-bottom: 15px
+
+              a
+                font-size: $font22px
+
+          a
+            font-size: $font22px

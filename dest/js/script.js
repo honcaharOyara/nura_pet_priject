@@ -43,128 +43,42 @@ function rollSlide() {
 }
 
 // ================================ Modal window ================================ //
-const modalWindows = document.querySelectorAll('.modal-window__link')
-const body = document.querySelector('.body')
-const lockPadding = document.querySelector('.lock-padding')
+const body = document.querySelector('body')
+const modalWindowLink = document.querySelector('.modal-window__link')
+const modalWindowBg = document.querySelector('.modal-window')
+const modalWindowWrap = document.querySelector('.modal-window__wrap')
 
-let unlock = true
+const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px'
 
-const timeout = 500
+modalWindowLink.addEventListener('click', function (e) {
+    modalWindowBg.classList.add('open')
+    body.style.overflowY = 'hidden'
+    // document.querySelector('section').style.paddingRight = lockPaddingValue // add padding right scrollbar size
+    modalWindowWrap.addEventListener('click', (e) => e.stopPropagation())
+    burgerMenu.classList.remove('open')
+    burgerMenuBtnOpen.classList.remove('hide-burger-menu__btn')
+    e.preventDefault()
+})
 
-// Перевірка на наявність модальних вікон та отримання їх по усій сторінці сторінці, також вішаєм слухач події
-// кліку на посилання, запускаюче модальне вікно.
-if (modalWindows.length > 0) {
-    for (let i = 0; i < modalWindows; i++) {
-        const modalWindow = modalWindows[i]
-        modalWindow.addEventListener("click", function (e) {
-            const modalWindowName = modalWindow.getAttribute('href').replace('#','')
-            const currentModalWindow = document.getElementById(modalWindowName)
-            modalWindowOpen(currentModalWindow)
-            e.preventDefault()
-        })
-    }
-}
+modalWindowBg.addEventListener('click', function () {
+    modalWindowBg.classList.remove('open')
+    body.style.overflowY = 'initial'
+    // document.querySelector('section').style.padding = '0' // remove padding right scrollbar size
+})
 
-// Перевірка на наявність любого об'єкту у модальному вікні для закриття модального вікна
-const closeModalWindowIcons = document.querySelectorAll('.close-modal-window')
-if (closeModalWindowIcons.length > 0) {
-    for (let i = 0; i < closeModalWindowIcons; i++) {
-        const closeModalWindowIcon = closeModalWindowIcons[i]
-        closeModalWindowIcon.addEventListener('click', function (e) {
-            modalWindowClose(closeModalWindowIcon.closest('.modal-window'))
-            e.preventDefault()
-        })
-    }
-}
+// ================================ Burger menu ================================ //
+const burgerMenuBtnOpen = document.querySelector('body .burger-menu__btn-open')
+const burgerMenuBtnClose = document.querySelector('body .burger-menu .burger-menu__wrap .burger-menu__btn-close')
+const burgerMenu = document.querySelector('.burger-menu')
 
-function modalWindowOpen(currentModalWindow) {
-    if (currentModalWindow && unlock) {
-        const modalWindowActive = document.querySelector('.modal-window.open')
-        if (modalWindowActive) {
-            modalWindowClose(modalWindowActive, false)
-        } else {
-            bodyLock()
-        }
-        currentModalWindow.classList.add('open')
-        currentModalWindow.addEventListener('click', function (e) {
-            if (!e.target.closest('.modal-window__content')) {
-                modalWindowClose(e.target.closest('.modal-window'))
-            }
-        })
-    }
-}
+burgerMenuBtnOpen.addEventListener('click', function (e) {
+    burgerMenu.classList.add('open')
+    burgerMenuBtnOpen.classList.add('hide-burger-menu__btn')
+    body.style.overflowY = 'hidden'
+})
 
-function modalWindowClose(modalWindowActive, doUnlock = true) {
-    if (unlock) {
-        modalWindowActive.classList.remove('open')
-        if (doUnlock) {
-            bodyUnlock()
-        }
-    }
-}
-
-function bodyLock() {
-    const lockPaddingValue = window.innerWidth - document.querySelector('.container').offsetWidth + 'px'
-
-    if (lockPadding > 0) {
-        for (let i = 0; i < lockPadding.length; i++) {
-            const el = lockPadding[i]
-            el.style.paddingRight = lockPaddingValue
-        }
-    }
-    body.style.paddingRight = lockPaddingValue
-    body.classList.add('lock')
-    
-    unlock = false
-    setTimeout(function () {
-        unlock = true
-    }, timeout)
-}
-
-function bodyUnlock() {
-    setTimeout(function () {
-        if (lockPadding.length > 0) {
-            for (let i = 0; i < lockPadding.length; i++) {
-                const el = lockPadding[i]
-                el.style.paddingRight = '0px'
-            }
-        }
-        body.style.paddingRight = '0px'
-        body.classList.remove('.lock')
-    },timeout)
-
-    unlock = false
-    setTimeout(function () {
-        unlock = true
-    }, timeout)
-}
-
-// document.addEventListener('keydown', function (e) {
-//     if(e.which === 27) {
-//         const modalWindowActive = document.querySelector('.modal-window.open')
-//         modalWindowClose(modalWindowActive)
-//     }
-// })
-
-//Поліфіли для провірки та покращення підтримки браузерами деяких властивостей
-// (function () {
-//     if (!Element.prototype.closest) {
-//         Element.prototype.closest = function (css) {
-//             var node = this
-//             while(node) {
-//                 if (node.matches(css)) return node
-//                 else node = node.parentElement
-//             }
-//             return null
-//         }
-//     }
-// })()
-
-// (function () {
-//     if (!Element.prototype.matches) {
-//         Element.prototype.matches = Element.prototype.matchesSelector ||
-//             Element.prototype.webkitMatchesSelector||
-//             Element.prototype.mozMatchesSelector ||
-//             Element.prototype.msMatchesSelector
-//     }
-// })()
+burgerMenuBtnClose.addEventListener('click', function (e) {
+    burgerMenu.classList.remove('open')
+    burgerMenuBtnOpen.classList.remove('hide-burger-menu__btn')
+    body.style.overflowY = 'initial'
+})
