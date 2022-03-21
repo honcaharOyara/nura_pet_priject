@@ -69,6 +69,11 @@ input::-ms-clear {
   display: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -117,25 +122,25 @@ header {
   background: url("../img/header_bg.jpg") center -50px no-repeat fixed;
   color: #fff;
 }
-header nav .container {
+header nav.header_nav-unscrolled .container {
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
-  margin-bottom: 115px;
   justify-content: space-between;
+  transition: all 0.3s ease;
 }
-header nav .container .header__logo a img {
+header nav.header_nav-unscrolled .container .header__logo a img {
   max-width: 144px;
   max-height: 137px;
   min-width: 50px;
   min-height: 40px;
   width: 100%;
 }
-header nav .container .header__navigation {
+header nav.header_nav-unscrolled .container .header__navigation {
   position: relative;
   padding-top: 71px;
 }
-header nav .container .header__navigation .header__navigation__contacts {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts {
   position: absolute;
   top: 25px;
   right: 0;
@@ -144,16 +149,22 @@ header nav .container .header__navigation .header__navigation__contacts {
   display: flex;
   margin-bottom: 25px;
 }
-header nav .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_messangers a svg {
+  fill: #ffffff;
+}
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_messangers a svg:active {
+  fill: #dba069;
+}
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers {
   transition: all 1s ease;
 }
-header nav .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers:active {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers:active {
   transform: scale(0.97);
 }
-header nav .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers:hover a {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers:hover a {
   background-color: #dba069;
 }
-header nav .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers a {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers a {
   position: relative;
   margin-left: 35px;
   padding: 10px 20px 10px 52px;
@@ -162,26 +173,26 @@ header nav .container .header__navigation .header__navigation__contacts .header_
   border-radius: 3px;
   transition: all 1s ease;
 }
-header nav .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers a:before {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__contacts .header__navigation__contacts_numbers a:before {
   content: url("../img/phone.svg");
   margin-right: 10px;
   position: absolute;
   top: 6px;
   left: 20px;
 }
-header nav .container .header__navigation .header__navigation__nav_menu ul {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul {
   display: -webkit- flex;
   display: -ms- flex;
   display: flex;
 }
-header nav .container .header__navigation .header__navigation__nav_menu ul li {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li {
   position: relative;
   margin-left: 50px;
 }
-header nav .container .header__navigation .header__navigation__nav_menu ul li a {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li a {
   color: #fff;
 }
-header nav .container .header__navigation .header__navigation__nav_menu ul li:after {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li:after {
   content: "";
   position: absolute;
   left: 0;
@@ -190,12 +201,15 @@ header nav .container .header__navigation .header__navigation__nav_menu ul li:af
   width: 1%;
   transition: all 0.5s ease;
 }
-header nav .container .header__navigation .header__navigation__nav_menu ul li:active {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li:active {
   transform: scale(0.97);
 }
-header nav .container .header__navigation .header__navigation__nav_menu ul li:hover:after {
+header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li:hover:after {
   width: 100%;
   background-color: #DBA069;
+}
+header section.header__banner {
+  padding-top: 115px;
 }
 header section.header__banner .container {
   display: -webkit- flex;
@@ -269,6 +283,78 @@ header section.header__banner .container .header__banner__deadlines p b {
 }
 header section.header__banner .container .header__banner__deadlines p:not(:last-child) {
   margin-bottom: 20px;
+}
+
+header nav.header_nav-scrolled {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(126, 134, 142, 0.9);
+  transition: all 0.5s ease;
+}
+header nav.header_nav-scrolled .container {
+  display: -webkit- flex;
+  display: -ms- flex;
+  display: flex;
+  justify-content: space-between;
+}
+header nav.header_nav-scrolled .container .header__logo {
+  margin: 20px 0;
+}
+header nav.header_nav-scrolled .container .header__logo a {
+  display: block;
+  border: 3px #dba069 solid;
+  transition: border-color 0.5s ease;
+}
+header nav.header_nav-scrolled .container .header__logo a img {
+  max-width: 50px;
+  width: 100%;
+}
+header nav.header_nav-scrolled .container .header__logo a:hover {
+  border: 3px #842231 solid;
+  transition: border-color 0.3s ease;
+}
+header nav.header_nav-scrolled .container .header__navigation {
+  padding-top: 40px;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__contacts {
+  display: none;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul {
+  display: -webkit- flex;
+  display: -ms- flex;
+  display: flex;
+  transition: all 0.3s ease;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul li {
+  position: relative;
+  margin-left: 50px;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul li a {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul {
+  transition: all 0.3s ease;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 4px;
+  width: 1%;
+  transition: all 0.5s ease;
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul li:active {
+  transform: scale(0.97);
+}
+header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul li:hover:after {
+  width: 100%;
+  background-color: #842231;
 }
 
 main section._1_about-project {
@@ -797,9 +883,21 @@ main section._7_payments .container .payments__address .payments__address__map {
 main section._7_payments .container .payments__address .payments__address__contacts h2 {
   margin-bottom: 30px;
 }
-main section._7_payments .container .payments__address .payments__address__contacts p {
-  margin-bottom: 30px;
+main section._7_payments .container .payments__address .payments__address__contacts > a {
+  margin: 0 0 30px 30px;
+  display: inline-block;
+  position: relative;
   font-size: 1.125rem;
+}
+main section._7_payments .container .payments__address .payments__address__contacts > a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -30px;
+  background-image: url("../img/location_icon.svg");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
 }
 main section._7_payments .container .payments__address .payments__address__contacts .payments__address__contacts-box {
   display: -webkit- flex;
@@ -1020,6 +1118,7 @@ body .burger-menu__btn-open {
   height: 30px;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.5s ease;
 }
 body .burger-menu__btn-open .burger-menu__btn-open__inner {
   position: absolute;
@@ -1059,52 +1158,67 @@ body .burger-menu__btn-open.hide-burger-menu__btn {
   }
 }
 @media (max-width: 576px) {
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content > a {
+  body .burger-menu .burger-menu__wrap .burger-menu__content > a,
+body .burger-menu .burger-menu__wrap .burger-menu__content a:active {
+    font-size: 1.125rem;
+  }
+  body .burger-menu .burger-menu__wrap .burger-menu__content a,
+body .burger-menu .burger-menu__wrap .burger-menu__content a:active {
     font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) {
-  body .burger-menu.open .burger-menu__wrap {
+  body .burger-menu .burger-menu__wrap {
     width: 60%;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content ul li a {
+  body .burger-menu .burger-menu__wrap .burger-menu__content ul li a,
+body .burger-menu .burger-menu__wrap .burger-menu__content ul li a:active {
     font-size: 1.125rem;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content > a {
+  body .burger-menu .burger-menu__wrap .burger-menu__content > a,
+body .burger-menu .burger-menu__wrap .burger-menu__content > a:active {
     font-size: 1rem;
   }
 }
 @media (max-width: 320px) {
-  body .burger-menu.open .burger-menu__wrap {
+  body .burger-menu .burger-menu__wrap {
     width: 100%;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__btn-close {
+  body .burger-menu .burger-menu__wrap .burger-menu__btn-close {
     top: 15px;
     left: 15px;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content ul {
+  body .burger-menu .burger-menu__wrap .burger-menu__content ul {
     padding: 100px 0 0 50px;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content ul li {
+  body .burger-menu .burger-menu__wrap .burger-menu__content ul li {
     margin-bottom: 15px;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content ul li a {
+  body .burger-menu .burger-menu__wrap .burger-menu__content ul li a,
+body .burger-menu .burger-menu__wrap .burger-menu__content ul li a:active {
     font-size: 1.375rem;
   }
-  body .burger-menu.open .burger-menu__wrap .burger-menu__content a {
+  body .burger-menu .burger-menu__wrap .burger-menu__content a,
+body .burger-menu .burger-menu__wrap .burger-menu__content a:active {
     font-size: 1.375rem;
   }
 }
 @media (max-width: 1024px) {
-  header nav .container .header__navigation .header__navigation__nav_menu ul li {
+  header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li {
     margin-left: 13px;
+  }
+
+  header nav.header_nav-scrolled .container .header__navigation .header__navigation__nav_menu ul li {
+    margin-left: 20px;
+    font-size: initial;
   }
 }
 @media (max-width: 768px) {
   header {
     padding-top: 50px;
   }
-  header nav {
+  header nav.header_nav-unscrolled,
+header nav.header_nav-scrolled {
     display: none;
   }
   header section.header__banner .container {
@@ -1192,11 +1306,20 @@ main section._1_about-project .container .about-project__wrap .about-project__wr
     position: initial;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  main section._1_about-project h2 {
+    margin-left: 20px;
+  }
+  main section._1_about-project .container {
+    padding: 0;
+  }
+  main section._1_about-project .container .about-project__wrap .about-project__wrap-inner .about-project__about-company {
+    padding: 0 20px;
+  }
   main section._1_about-project .container .about-project__wrap .about-project__wrap-inner:last-child .about-project__company-logo__box {
-    margin: 0 -5% 40px -5%;
-    max-width: initial;
-    width: 109.6%;
+    margin-bottom: 40px;
+    max-width: 100%;
+    width: 100%;
   }
   main section._1_about-project .container .about-project__wrap .about-project__wrap-inner:last-child .about-project__company-logo__box img.about-project__company-logo__img {
     width: 100%;
@@ -1260,6 +1383,22 @@ main section._3_location .container .location__map-box .location__map__bg-dots {
     height: initial;
   }
 }
+@media (max-width: 576px) {
+  main section._3_location .container {
+    padding: 0;
+  }
+  main section._3_location .container .location__content {
+    padding: 0 20px;
+  }
+  main section._3_location .container .location__map-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  main section._3_location .container .location__map-box img.location__map__img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 @media (max-width: 1140px) {
   main section._4_advantages {
     padding: 50px 0 40px 0;
@@ -1277,14 +1416,29 @@ main section._3_location .container .location__map-box .location__map__bg-dots {
   }
 }
 @media (max-width: 576px) {
+  main section._4_advantages .container {
+    padding: 0;
+  }
   main section._4_advantages .container img.advantages__dots,
 main section._4_advantages .container img.advantages__bg {
     display: none;
+  }
+  main section._4_advantages .container .advantages__content-box h2 {
+    margin-left: 20px;
   }
   main section._4_advantages .container .advantages__content-box ul {
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  main section._4_advantages .container {
+    padding: 0;
+  }
+  main section._4_advantages .container .advantages__content-box ul {
+    padding: 0 20px;
   }
 }
 @media (max-width: 1140px) {
@@ -1323,7 +1477,14 @@ main section._5_why-nura .container .why-nura__content-box .why-nura__img-box .w
   main section._5_why-nura {
     padding: 20px 0 40px 0;
   }
+  main section._5_why-nura .container {
+    padding: 0;
+  }
+  main section._5_why-nura .container h2 {
+    margin-left: 20px;
+  }
   main section._5_why-nura .container .why-nura__content-box .why-nura__content-box__inner {
+    padding: 0 20px;
     display: initial;
   }
   main section._5_why-nura .container .why-nura__content-box .why-nura__content-box__inner ul {

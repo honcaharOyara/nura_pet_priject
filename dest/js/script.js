@@ -90,3 +90,38 @@ function closeBurger() {
     burgerMenuBtnOpen.classList.remove('hide-burger-menu__btn')
     body.style.overflowY = 'initial'
 }
+
+// ================================ Navigation ================================ //
+const headerNav = document.querySelector('body header nav')
+const headerBanner = document.querySelector('.header__banner')
+
+window.addEventListener('scroll', function () {
+    let scrollYValue = window.pageYOffset
+    scrollInit(scrollYValue)
+
+})
+
+function scrollInit(scrollYValue) {
+    if (scrollYValue > 0) {
+        headerNav.classList.remove('header_nav-unscrolled')
+        headerNav.classList.add('header_nav-scrolled')
+        headerBanner.style.paddingTop = '250px'
+    } else {
+        headerNav.classList.add('header_nav-unscrolled')
+        headerNav.classList.remove('header_nav-scrolled')
+        headerBanner.style.paddingTop = '115px'
+    }
+}
+
+const anchorsHeader = document.querySelectorAll('header nav .container .header__navigation .header__navigation__nav_menu ul li a[href*="#"]')
+
+for (let anchorHeader of anchorsHeader) {
+    anchorHeader.addEventListener('click', function (e) {
+        e.preventDefault()
+        const blockId = anchorHeader.getAttribute('href')
+        document.querySelector('' + blockId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}

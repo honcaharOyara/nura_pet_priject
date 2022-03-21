@@ -1,6 +1,6 @@
 @include media_laptop
   header
-    nav
+    nav.header_nav-unscrolled
       .container
         .header__navigation
           .header__navigation__nav_menu
@@ -8,10 +8,21 @@
               li
                 margin-left: 13px
 
+  header
+    nav.header_nav-scrolled
+      .container
+        .header__navigation
+          .header__navigation__nav_menu
+            ul
+              li
+                margin-left: 20px
+                font-size: initial
+
 @include media_tablet
   header
     padding-top: 50px
-    nav
+    nav.header_nav-unscrolled,
+    nav.header_nav-scrolled
       display: none
 
     section.header__banner

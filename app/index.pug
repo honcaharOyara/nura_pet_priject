@@ -7,7 +7,7 @@ head
     link(rel='stylesheet' href='./css/main.css')
 body
     header
-        nav
+        nav.header_nav-unscrolled#nav
             .container
                 .header__logo
                     a(href="#")
@@ -17,29 +17,31 @@ body
                     .header__navigation__contacts
                         .header__navigation__contacts_messangers
                             a(href="https://wa.me/4957777777" target="_blank")
-                                img(src="./img/whatsapp.svg")
+                                svg(width='26' height='26' viewbox='0 0 26 26' xmlns='http://www.w3.org/2000/svg')
+                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M22.2117 3.7789C21.0125 2.57748 19.5856 1.62485 18.0137 0.976186C16.4419 0.327526 14.7564 -0.00426286 13.0548 4.13467e-05C5.91957 4.13467e-05 0.111037 5.77956 0.108153 12.8838C0.108153 15.1542 0.703714 17.3702 1.83571 19.3249L0 26L6.86266 24.2074C8.76095 25.2359 10.8877 25.7752 13.049 25.7761H13.0548C20.1885 25.7761 25.9971 19.9966 25.9999 12.8924C26.0048 11.1995 25.6726 9.52254 25.0224 7.95827C24.3721 6.39401 23.4168 4.97352 22.2117 3.7789ZM13.0548 23.6018H13.0504C11.1232 23.602 9.2314 23.0859 7.57358 22.1078L7.18135 21.8753L3.10903 22.9387L4.19489 18.9876L3.93965 18.5829C2.86214 16.8757 2.29173 14.8999 2.29428 12.8838C2.29717 6.97939 7.12367 2.17579 13.0591 2.17579C14.4727 2.17267 15.8728 2.4486 17.1785 2.98761C18.4842 3.52663 19.6695 4.31802 20.6658 5.316C21.6675 6.30921 22.4615 7.49016 23.0018 8.7906C23.5421 10.091 23.8181 11.4852 23.8138 12.8924C23.8109 18.7968 18.9844 23.6018 13.0548 23.6018ZM18.957 15.5805C18.6326 15.4183 17.0434 14.6404 16.7464 14.5328C16.4508 14.4252 16.2359 14.3721 16.0196 14.6935C15.8033 15.015 15.1832 15.7398 14.9943 15.9551C14.8054 16.1704 14.6165 16.1962 14.2935 16.0355C13.9705 15.8747 12.9279 15.5346 11.692 14.4381C10.7302 13.5841 10.0813 12.5307 9.89238 12.2078C9.70347 11.8849 9.87219 11.7112 10.0351 11.5505C10.1808 11.407 10.3582 11.1745 10.5197 10.9864C10.6812 10.7984 10.7345 10.665 10.8427 10.4497C10.9508 10.2344 10.8975 10.0464 10.8153 9.88565C10.7345 9.72347 10.0871 8.13902 9.81739 7.49462C9.55639 6.87031 9.28961 6.95355 9.09061 6.94494C8.88451 6.93655 8.67824 6.93272 8.47197 6.93346C8.30795 6.93762 8.14656 6.97546 7.99792 7.04461C7.84928 7.11376 7.7166 7.21273 7.60819 7.33531C7.31113 7.65823 6.47619 8.43611 6.47619 10.0206C6.47619 11.605 7.63559 13.1364 7.7971 13.3516C7.95861 13.5669 10.0784 16.8176 13.323 18.2126C14.0959 18.5442 14.6987 18.7422 15.1674 18.8915C15.9417 19.1369 16.6469 19.101 17.205 19.0192C17.8265 18.9274 19.1185 18.2413 19.3882 17.4893C19.6579 16.7373 19.6579 16.0929 19.5771 15.958C19.4964 15.823 19.2786 15.7412 18.957 15.5805Z')
+
                         .header__navigation__contacts_numbers
                             a(href="tel:+77000011888") +7 700 001 18 88
                     .header__navigation__nav_menu
                         ul
                             li
-                                a(href="#") About project
+                                a(href="#1_about-project") About project
                             li
-                                a(href="#") Location
+                                a(href="#3_location") Location
                             li
-                                a(href="#") Benefits
+                                a(href="#4_advantages") Benefits
                             li
-                                a(href="#") Why we are
+                                a(href="#5_why-nura") Why we are
                             li
-                                 a(href="#") Payments methods
+                                 a(href="#7_payments") Payments methods
                             li
-                                a(href="#") Contacts
+                                a(href="#contacts") Contacts
 
         section.header__banner
             .container
                 .header__banner__info
                     h1  Elite cottage village in Nur-Sultan city
-                    a.header__banner_info-btn(href="#") Download presentation
+                    a.header__banner_info-btn(href="#dowload_presentation") Download presentation
                     h3 36 cottages
                     .header__banner__info__box
                         div
@@ -56,7 +58,8 @@ body
 
 
     main
-        section._1_about-project
+        section._1_about-project#1_about-project
+            h2.h2-parallax-bg
             .container
                 h2.h2-title About project
                 .about-project__wrap
@@ -111,7 +114,7 @@ body
                         img(src="./img/arrow-right.svg")
 
 
-        section._3_location
+        section._3_location#3_location
             .container
                 .location__content
                     h2.h2-title Location
@@ -123,7 +126,7 @@ body
                     .location__map__bg-dots
 
 
-        section._4_advantages
+        section._4_advantages#4_advantages
             .container
                 img.advantages__dots(src="./img/dots.svg")
                 img.advantages__bg(src="./img/4_advantages_bg.svg")
@@ -164,7 +167,7 @@ body
                             p Each owner of the cottage is given the opportunity to build additional buildings on his #[br] land plot: a bathhouse, a sauna, a summer kitchen, etc.
 
 
-        section._5_why-nura
+        section._5_why-nura#5_why-nura
             .container
                 h2.h2-title Why NURA ELITE?
                 .why-nura__content-box
@@ -201,7 +204,7 @@ body
                                     p Centralized water supply, power supply and sewerage.
                                     p The heating system and hot water is one common gas tank for the entire town, functioning at the expense of gas.
 
-        section._6_technologies
+        section._6_technologies#6_technologies
             .container
                 h2.h2-title Building technology
                 .technologies__content-box
@@ -237,14 +240,14 @@ body
                 .technologies__download-presentation
                     h2.h2-title Download presentation
                     p Leave your contacts and we will send you
-                    form
-                        input(type="text" placeholder="Your name" required)
-                        input(type="number" placeholder="Phone number" required)
+                    form#dowload_presentation
+                        input._req(type="text" placeholder="Your name" required)
+                        input._req(type="number" placeholder="Phone number" required)
                         input(type="submit")
                 .technologies__bg-logo
                     img(src="./img/bg-logo__cherry.svg")
 
-        section._7_payments
+        section._7_payments#7_payments
             .container
                 h2.h2-title Payment methods
                 ul
@@ -263,9 +266,9 @@ body
                 .payments__address
                     .payments__address__map
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.755751349219!2d71.42242228172763!3d51.13141316940208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586a04e901251%3A0x5047617e2afb5feb!2z0JjQt9GD0LzRgNGD0LTQvdGL0Lkg0LrQsi3Quywg0YPQuy4g0JTQuNC90LzRg9GF0LDQvNC10LTQsCDQmtGD0L3QsNC10LLQsCAxMCwg0J3Rg9GALdCh0YPQu9GC0LDQvSAwMjAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sua!4v1646328085084!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    .payments__address__contacts
+                    .payments__address__contacts#contacts
                         h2.h2-title Contacts
-                        p st. Kunaeva 10, business center "Emerald", block - A, floor 1
+                        a(href="https://www.google.com/maps/place/%D0%91%D0%A6+Emerald+Tower/@51.1307261,71.4210632,17z/data=!4m9!1m2!2m1!1z0J3Rg9GALdCh0YPQu9GC0LDQvSwg0JrQsNC30LDRhdGB0YLQsNC9INGD0LsuINCa0YPQvdCw0LXQstCwIDEwLCDQkdCmIOKAnNCY0LfRg9C80YDRg9C00L3Ri9C54oCd!3m5!1s0x42458713a6ad47d5:0x51b4bb921db67e09!8m2!3d51.1308914!4d71.4236561!15sCmDQndGD0YAt0KHRg9C70YLQsNC9LCDQmtCw0LfQsNGF0YHRgtCw0L0g0YPQuy4g0JrRg9C90LDQtdCy0LAgMTAsINCR0KYg4oCc0JjQt9GD0LzRgNGD0LTQvdGL0LnigJ2SARpvZmZpY2Vfc3BhY2VfcmVudGFsX2FnZW5jeQ" target="_blank") Nur-Sultan city, st. Kunaeva 10, business center "Emerald", block - A, floor 1
                         .payments__address__contacts-box
                             ul
                                 li
@@ -284,13 +287,13 @@ body
         .container
             ul
                 li
-                    a(href="#") Benefits
+                    a(href="#4_advantages") Benefits
                 li
-                    a(href="#") Why we are
+                    a(href="#5_why-nura") Why we are
                 li
-                    a(href="#") Technologies
+                    a(href="#6_technologies") Technologies
                 li
-                    a(href="#") Payments methods
+                    a(href="#7_payments") Payments methods
 
     .burger-menu__btn-open
         .burger-menu__btn-open__inner
@@ -302,17 +305,17 @@ body
             .burger-menu__content
                 ul
                     li
-                        a(href="#") About project
+                        a(href="#1_about-project") About project
                     li
-                        a(href="#") Location
+                        a(href="#3_location") Location
                     li
-                        a(href="#") Benefits
+                        a(href="#4_advantages") Benefits
                     li
-                        a(href="#") Why we are
+                        a(href="#5_why-nura") Why we are
                     li
-                        a(href="#") Payments methods
+                        a(href="#7_payments") Payments methods
                     li
-                        a(href="#") Contacts
+                        a(href="#contacts") Contacts
 
                 a.modal-window__link(href="#") Download presentation
 
@@ -322,8 +325,8 @@ body
                 h2.h2-title Download presentation
                 p Leave your contacts and we will send you
                 form
-                    input(type="text" placeholder="Your name" required)
-                    input(type="number" placeholder="Phone number" required)
+                    input._req(type="text" placeholder="Your name" required)
+                    input._req(type="number" placeholder="Phone number" required)
                     input.close-modal-window(type="submit")
 
     script(src="./js/script.js")

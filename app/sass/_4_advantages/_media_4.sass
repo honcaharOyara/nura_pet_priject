@@ -24,12 +24,26 @@
   main
     section._4_advantages
       .container
+        padding: 0
+
         img.advantages__dots,
         img.advantages__bg
           display: none
 
         .advantages__content-box
+          h2
+            margin-left: 20px
+
           ul
             +ul-columns(1)
+            padding: 0 20px
 
 @include media_mobile
+  main
+    section._4_advantages
+      .container
+        padding: 0
+
+        .advantages__content-box
+          ul
+            padding: 0 20px

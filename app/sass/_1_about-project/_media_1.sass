@@ -55,16 +55,25 @@
               .about-project__company-logo__bg-dots
                 position: initial
 
-@include media_mobile
+@include media_tablet-mobile
   main
     section._1_about-project
+      h2
+        margin-left: 20px
+
       .container
+        padding: 0
+
         .about-project__wrap
+          .about-project__wrap-inner
+            .about-project__about-company
+              padding: 0 20px
+
           .about-project__wrap-inner:last-child
             .about-project__company-logo__box
-              margin: 0 -5% 40px -5%
-              max-width: initial
-              width: 109.6%
+              margin-bottom: 40px
+              max-width: 100%
+              width: 100%
 
               img.about-project__company-logo__img
                 width: 100%

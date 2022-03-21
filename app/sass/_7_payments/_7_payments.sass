@@ -54,9 +54,21 @@ main
           h2
             margin-bottom: 30px
 
-          p
-            margin-bottom: 30px
+          >a
+            margin: 0 0 30px 30px
+            display: inline-block
+            position: relative
             font-size: $font18px
+
+          >a:before
+            content: ''
+            display: block
+            position: absolute
+            left: -30px
+            background-image: url('../img/location_icon.svg')
+            background-size: 20px 20px
+            width: 20px
+            height: 20px
 
           .payments__address__contacts-box
             +display(flex)

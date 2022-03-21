@@ -3,11 +3,11 @@ header
   background: url("../img/header_bg.jpg") center -50px no-repeat fixed
   color: #fff
 
-  nav
+  nav.header_nav-unscrolled
     .container
       +display(flex)
-      margin-bottom: 115px
       justify-content: space-between
+      transition: all .3s ease
 
       .header__logo
         a
@@ -28,6 +28,14 @@ header
           right: 0
           +display(flex)
           margin-bottom: 25px
+
+          .header__navigation__contacts_messangers
+            a
+              svg
+                fill: #ffffff
+
+              svg:active
+                fill: #dba069
 
           .header__navigation__contacts_numbers
             transition: all 1s ease
@@ -88,6 +96,7 @@ header
                 background-color: #DBA069
 
   section.header__banner
+    padding-top: 115px
     .container
       +display(flex)
 
@@ -156,3 +165,72 @@ header
 
         p:not(:last-child)
           margin-bottom: 20px
+
+header
+  nav.header_nav-scrolled
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+    background-color: rgba(126, 134, 142, 0.9)
+    transition: all .5s ease
+
+    .container
+      +display(flex)
+      justify-content: space-between
+
+      .header__logo
+        margin: 20px 0
+        a
+          display: block
+          border: 3px #dba069 solid
+          transition: border-color .5s ease
+
+          img
+            max-width: 50px
+            width: 100%
+
+        a:hover
+          border: 3px #842231 solid
+          transition: border-color .3s ease
+
+      .header__navigation
+        padding-top: 40px
+
+        .header__navigation__contacts
+          display: none
+
+        .header__navigation__nav_menu
+          ul
+            +display(flex)
+            transition: all .3s ease
+
+            li
+              position: relative
+              margin-left: 50px
+
+              a
+                color: #fff
+                font-size: $font18px
+                font-weight: 700
+
+        .header__navigation__nav_menu
+          ul
+            transition: all .3s ease
+            li:after
+              content: ""
+              position: absolute
+              left: 0
+              bottom: -5px
+              height: 4px
+              width: 1%
+              transition: all .5s ease
+
+            li:active
+              transform: scale(.97)
+
+            li:hover
+              &:after
+                width: 100%
+                background-color: #842231

@@ -106,6 +106,7 @@ body
     height: 30px
     opacity: 0
     visibility: hidden
+    transition: all .5s ease
 
     .burger-menu__btn-open__inner
       position: absolute
@@ -145,30 +146,37 @@ body
 
 @include media_tablet-mobile
   body
-    .burger-menu.open
+    .burger-menu
       .burger-menu__wrap
         .burger-menu__content
-          > a
+          >a,
+          a:active
+            font-size: $font18px
+
+          a,
+          a:active
             font-size: $font18px
 
 @include media_mobile
   body
-    .burger-menu.open
+    .burger-menu
       .burger-menu__wrap
         width: 60%
 
         .burger-menu__content
           ul
             li
-              a
+              a,
+              a:active
                 font-size: $font18px
 
-          > a
+          >a,
+          >a:active
             font-size: 1rem
 
 @include media_mobile-xxs
   body
-    .burger-menu.open
+    .burger-menu
       .burger-menu__wrap
         width: 100%
 
@@ -183,8 +191,10 @@ body
             li
               margin-bottom: 15px
 
-              a
+              a,
+              a:active
                 font-size: $font22px
 
-          a
+          a,
+          a:active
             font-size: $font22px
