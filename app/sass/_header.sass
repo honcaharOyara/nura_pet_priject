@@ -237,6 +237,49 @@ header
                 width: 100%
                 background-color: #842231
 
+body
+  header._anim-item
+    nav
+      opacity: 0
+
+    section.header__banner
+      .container
+        .header__banner__info
+          h1
+            @extend %anim-styles__hidden
+
+          a.header__banner_info-btn
+           @extend %anim-styles__hidden
+
+          h3,
+          .header__banner__info__box
+            @extend %anim-styles__hidden
+
+        .header__banner__deadlines
+          @extend %anim-styles__hidden
+
+body
+  header._anim-item._active
+    nav
+      opacity: 1
+      transition: opacity 1.5s ease
+
+    section.header__banner
+      .container
+        .header__banner__info
+          h1
+            @extend %anim-styles__active-700ms
+
+          a.header__banner_info-btn
+            @extend %anim-styles__active-700ms
+
+          h3,
+          .header__banner__info__box
+            @extend %anim-styles__active-1700ms
+
+        .header__banner__deadlines
+          @extend %anim-styles__active-1700ms
+
 @include media_laptop
   header
     nav.header_nav-unscrolled

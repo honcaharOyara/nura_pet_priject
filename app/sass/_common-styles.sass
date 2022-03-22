@@ -1,3 +1,23 @@
+html
+  overflow-x: hidden
+  font-family:  "Fira sans", sans-serif
+  font-size: 16px
+  font-weight: 300
+
+body
+  position: relative
+
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-track
+  background-color: rgba(126, 134, 142, .9)
+  
+::-webkit-scrollbar-thumb
+  background-color: rgba(132, 34, 49, 1)
+  border-radius: 30px
+
+
 .container
   padding: 0 20px
   max-width: 1200px
@@ -17,18 +37,32 @@
   font-weight: 700
   color: rgba(51, 51, 51, 0.3)
   white-space: nowrap
-  opacity: 1
 
-._anim-item
+%anim-styles__hidden
   position: relative
-  top: 100px
+  top: 200px
   opacity: 0
   transition: all .3s ease
 
-._anim-item.active
-    top: 0
-    opacity: 1
-    transition: all .3s ease
+%anim-styles__active-700ms
+  top: 0
+  opacity: 1
+  transition: all 1s ease
+
+%anim-styles__active-1300ms
+  top: 0
+  opacity: 1
+  transition: all 1.3s ease
+
+%anim-styles__active-1700ms
+  top: 0
+  opacity: 1
+  transition: all 1.7s ease
+
+%anim-styles__active-2s
+  top: 0
+  opacity: 1
+  transition: all 2s ease
 
 
 @include media_tablet

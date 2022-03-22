@@ -105,7 +105,6 @@ const scrollUpBtn = document.querySelector('body a.scrollup-btn')
 window.addEventListener('scroll', function () {
     let scrollYValue = window.pageYOffset
     scrollInit(scrollYValue)
-
 })
 
 function scrollInit(scrollYValue) {
@@ -142,7 +141,7 @@ if (anchorsHeader.length > 0) {
 // ================================ Animations ================================ //
 //Animation scroll title background
 const animTitlesBg = document.querySelectorAll('.h2-amin-title-bg')
-body.style.overflowX = 'hidden'
+// body.style.overflowX = 'hidden'
 
 if (animTitlesBg.length > 0) {
     window.addEventListener('scroll',function () {
@@ -155,34 +154,31 @@ if (animTitlesBg.length > 0) {
 }
 
 //Animation scroll content
-// const animSections = document.querySelectorAll('section')
-// const animItems = document.querySelectorAll('section')
-//
-// if (animItems.length > 0) {
-//     window.addEventListener('scroll', animItemOnScroll)
-//     function animItemOnScroll(params) {
-//         for (let animSection of animSections){
-//             for (let animItem of animItems){
-//                 const animSectionHeight = animSection.offsetHeight
-//                 const animItemOffset = offset(animSection).top
-//                 const animStart = 200
-//
-//                 let animItemPoint = window.innerHeight - animSectionHeight / animStart
-//
-//                 if (animSectionHeight > window.innerHeight) {
-//                     animItemPoint = window.innerHeight - window.innerHeight / animStart
-//                 }
-//                 if ((pageYOffset > animItemOffset - animStart) && pageYOffset < (animItemOffset + animSectionHeight)){
-//                     animItem.classList.add('_active')
-//                 }
-//             }
-//         }
-//     }
-//     function offset(el) {
-//         const rect = el.getBoundingClientRect(),
-//             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//             scrollTop = window.pageYOffset || document.documentElement.scrollTop
-//         return{top: rect.top + scrollTop, left: rect.left + scrollLeft}
-//     }
-//     setTimeout(() => animItemOnScroll(), 500)
-// }
+const animItems = document.querySelectorAll('._anim-item')
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animItemsOnScroll)
+    function animItemsOnScroll(params) {
+        for (let animItem of animItems){
+            const animItemHeight = animItem.offsetHeight
+            const animItemOffset = offset(animItem).top
+            const animStart = 200
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart
+
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart
+            }
+            if ((pageYOffset > animItemOffset - animStart) && pageYOffset < (animItemOffset + animItemHeight)){
+                animItem.classList.add('_active')
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop
+        return{top: rect.top + scrollTop, left: rect.left + scrollLeft}
+    }
+    setTimeout(() => animItemsOnScroll(), 500)
+}

@@ -77,6 +77,32 @@ main
               top: 40px
               left: 40px
 
+main
+  section._1_about-project._anim-item
+    .container
+      h2.h2-title
+        @extend %anim-styles__hidden
+
+      .about-project__wrap
+        .about-project__wrap-inner
+          .about-project__about-company,
+          .about-project__company-logo__box
+            @extend %anim-styles__hidden
+
+main
+  section._1_about-project._anim-item._active
+    .container
+      h2.h2-title
+        @extend %anim-styles__active-700ms
+
+      .about-project__wrap
+        .about-project__wrap-inner
+          .about-project__about-company,
+          .about-project__company-logo__box
+            @extend %anim-styles__active-1300ms
+
+
+
 @include media_desktop
   main
     section._1_about-project

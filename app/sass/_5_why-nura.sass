@@ -89,6 +89,24 @@ main
                 p:last-child
                   margin-top: 20px
 
+main
+  section._5_why-nura._anim-item
+    .container
+      h2
+        @extend %anim-styles__hidden
+
+      .why-nura__content-box
+        @extend %anim-styles__hidden
+
+main
+  section._5_why-nura._anim-item._active
+    .container
+      h2
+        @extend %anim-styles__active-700ms
+
+      .why-nura__content-box
+        @extend %anim-styles__active-1700ms
+
 @include media_desktop
   main
     section._5_why-nura

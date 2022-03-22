@@ -65,6 +65,24 @@ main
         .slider__box
           background: url("../img/dots.svg") 60px 61px no-repeat
 
+main
+  section._2_slider._anim-item
+    .container
+      h2
+        @extend %anim-styles__hidden
+
+      .slider__wrap
+        @extend %anim-styles__hidden
+
+main
+  section._2_slider._anim-item._active
+    .container
+      h2
+        @extend %anim-styles__active-700ms
+
+      .slider__wrap
+        @extend %anim-styles__active-1300ms
+
 @include media_desktop
   main
     section._2_slider

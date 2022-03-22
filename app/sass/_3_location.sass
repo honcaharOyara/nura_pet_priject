@@ -68,6 +68,27 @@ main
           top: 56px
           left: 43px
 
+main
+  section._3_location._anim-item
+    .container
+      h2
+        @extend %anim-styles__hidden
+
+      .location__content,
+      .location__map-box
+        @extend %anim-styles__hidden
+
+main
+  section._3_location._anim-item._active
+    .container
+      h2
+        @extend %anim-styles__active-700ms
+
+
+      .location__content,
+      .location__map-box
+        @extend %anim-styles__active-1300ms
+
 @include media_desktop
   main
     section._3_location

@@ -50,13 +50,6 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: "Fira sans", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-body {
-  position: relative;
 }
 
 input,
@@ -105,6 +98,30 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+html {
+  overflow-x: hidden;
+  font-family: "Fira sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body {
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(126, 134, 142, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #842231;
+  border-radius: 30px;
+}
+
 .container {
   padding: 0 20px;
   max-width: 1200px;
@@ -126,20 +143,47 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: rgba(51, 51, 51, 0.3);
   white-space: nowrap;
-  opacity: 1;
 }
 
-._anim-item {
+main section._7_payments._anim-item .container .payments__address .payments__address__map,
+main section._7_payments._anim-item .container .payments__address .payments__address__contacts, main section._7_payments._anim-item .container ul, main section._7_payments._anim-item .container h2, main section._6_technologies._anim-item .container .technologies__download-presentation__box .technologies__download-presentation, main section._6_technologies._anim-item .container .technologies__content-box, main section._6_technologies._anim-item .container h2, main section._5_why-nura._anim-item .container .why-nura__content-box, main section._5_why-nura._anim-item .container h2, main section._4_advantages._anim-item .container .advantages__content-box ul,
+main section._4_advantages._anim-item .container .advantages__content-box .advantages__img-box, main section._4_advantages._anim-item .container .advantages__content-box h2, main section._3_location._anim-item .container .location__content,
+main section._3_location._anim-item .container .location__map-box, main section._3_location._anim-item .container h2, main section._2_slider._anim-item .container .slider__wrap, main section._2_slider._anim-item .container h2, main section._1_about-project._anim-item .container .about-project__wrap .about-project__wrap-inner .about-project__about-company,
+main section._1_about-project._anim-item .container .about-project__wrap .about-project__wrap-inner .about-project__company-logo__box, main section._1_about-project._anim-item .container h2.h2-title, body header._anim-item section.header__banner .container .header__banner__deadlines, body header._anim-item section.header__banner .container .header__banner__info h3,
+body header._anim-item section.header__banner .container .header__banner__info .header__banner__info__box, body header._anim-item section.header__banner .container .header__banner__info a.header__banner_info-btn, body header._anim-item section.header__banner .container .header__banner__info h1 {
   position: relative;
-  top: 100px;
+  top: 200px;
   opacity: 0;
   transition: all 0.3s ease;
 }
 
-._anim-item.active {
+main section._7_payments._anim-item._active .container h2, main section._6_technologies._anim-item._active .container h2, main section._5_why-nura._anim-item._active .container h2, main section._4_advantages._anim-item._active .container .advantages__content-box h2, main section._3_location._anim-item._active .container h2, main section._2_slider._anim-item._active .container h2, main section._1_about-project._anim-item._active .container h2.h2-title, body header._anim-item._active section.header__banner .container .header__banner__info a.header__banner_info-btn, body header._anim-item._active section.header__banner .container .header__banner__info h1 {
   top: 0;
   opacity: 1;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
+}
+
+main section._7_payments._anim-item._active .container ul, main section._6_technologies._anim-item._active .container .technologies__content-box, main section._4_advantages._anim-item._active .container .advantages__content-box ul,
+main section._4_advantages._anim-item._active .container .advantages__content-box .advantages__img-box, main section._3_location._anim-item._active .container .location__content,
+main section._3_location._anim-item._active .container .location__map-box, main section._2_slider._anim-item._active .container .slider__wrap, main section._1_about-project._anim-item._active .container .about-project__wrap .about-project__wrap-inner .about-project__about-company,
+main section._1_about-project._anim-item._active .container .about-project__wrap .about-project__wrap-inner .about-project__company-logo__box {
+  top: 0;
+  opacity: 1;
+  transition: all 1.3s ease;
+}
+
+main section._7_payments._anim-item._active .container .payments__address .payments__address__map,
+main section._7_payments._anim-item._active .container .payments__address .payments__address__contacts, main section._5_why-nura._anim-item._active .container .why-nura__content-box, body header._anim-item._active section.header__banner .container .header__banner__deadlines, body header._anim-item._active section.header__banner .container .header__banner__info h3,
+body header._anim-item._active section.header__banner .container .header__banner__info .header__banner__info__box {
+  top: 0;
+  opacity: 1;
+  transition: all 1.7s ease;
+}
+
+main section._6_technologies._anim-item._active .container .technologies__download-presentation__box .technologies__download-presentation {
+  top: 0;
+  opacity: 1;
+  transition: all 2s ease;
 }
 
 @media (max-width: 768px) {
@@ -386,6 +430,13 @@ header nav.header_nav-scrolled .container .header__navigation .header__navigatio
   background-color: #842231;
 }
 
+body header._anim-item nav {
+  opacity: 0;
+}
+body header._anim-item._active nav {
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
 @media (max-width: 1024px) {
   header nav.header_nav-unscrolled .container .header__navigation .header__navigation__nav_menu ul li {
     margin-left: 13px;
@@ -1459,7 +1510,7 @@ body .modal-window.open {
 body .burger-menu {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 6;
@@ -1557,7 +1608,7 @@ body .burger-menu.open .burger-menu__wrap {
 }
 
 body .burger-menu__btn-open {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 15px;
   width: 50px;

@@ -90,6 +90,34 @@ main
               li:not(:last-child)
                 margin-bottom: 10px
 
+main
+  section._7_payments._anim-item
+    .container
+      h2
+        @extend %anim-styles__hidden
+
+      ul
+        @extend %anim-styles__hidden
+
+      .payments__address
+        .payments__address__map,
+        .payments__address__contacts
+          @extend %anim-styles__hidden
+
+main
+  section._7_payments._anim-item._active
+    .container
+      h2
+        @extend %anim-styles__active-700ms
+
+      ul
+        @extend %anim-styles__active-1300ms
+
+      .payments__address
+        .payments__address__map,
+        .payments__address__contacts
+          @extend %anim-styles__active-1700ms
+
 @include media_laptop
   main
     section._7_payments

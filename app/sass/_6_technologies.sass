@@ -107,6 +107,32 @@ main
     right: -43px
     z-index: -1
 
+main
+  section._6_technologies._anim-item
+    .container
+      h2
+        @extend %anim-styles__hidden
+
+      .technologies__content-box
+        @extend %anim-styles__hidden
+
+      .technologies__download-presentation__box
+        .technologies__download-presentation
+          @extend %anim-styles__hidden
+
+main
+  section._6_technologies._anim-item._active
+    .container
+      h2
+        @extend %anim-styles__active-700ms
+
+      .technologies__content-box
+        @extend %anim-styles__active-1300ms
+
+      .technologies__download-presentation__box
+        .technologies__download-presentation
+          @extend %anim-styles__active-2s
+
 @include media_desktop
   main
     section._6_technologies
