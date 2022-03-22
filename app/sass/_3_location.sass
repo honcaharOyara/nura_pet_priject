@@ -1,6 +1,11 @@
 main
   section._3_location
-    padding: 90px 0 140px 0
+    padding: 120px 0 0 0
+    position: relative
+
+    h2.h2-amin-title-bg
+      font-size: 13.125rem
+      line-height: 18rem
 
     .container
       +display(flex)
@@ -62,3 +67,54 @@ main
         .location__map__bg-dots
           top: 56px
           left: 43px
+
+@include media_desktop
+  main
+    section._3_location
+      padding: 40px 0 0 0
+
+      .container
+        .location__content
+          margin-right: 25px
+          padding: 0 20px 0 20px
+
+        .location__map-box
+          img.location__map__img
+            position: initial
+
+          .location__map__bg-color,
+          .location__map__bg-dots
+            display: none
+
+@include media_laptop
+  main
+    section._3_location
+      .container
+        display: initial
+
+        .location__content
+          max-width: 100%
+          margin: 0 0 25px 0
+
+        .location__map-box
+          margin: 0 auto
+          max-width: 100%
+          max-height: initial
+          height: initial
+
+@include media_tablet-mobile
+  main
+    section._3_location
+      .container
+        padding: 0
+
+        .location__content
+          padding: 0 20px
+
+        .location__map-box
+          max-width: 100%
+          width: 100%
+
+          img.location__map__img
+            max-width: 100%
+            width: 100%

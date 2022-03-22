@@ -1,0 +1,44 @@
+.scrollup-btn
+  display: none
+
+@include media_tablet
+  body
+    .scrollup-btn
+      width: 50px
+      height: 50px
+      display: block
+      position: fixed
+      right: 20px
+      bottom: 20px
+      z-index: 10
+      background-color: #842231
+      border-radius: 50%
+      overflow: hidden
+      visibility: visible
+      opacity: .8
+      transition: opacity .5s ease
+
+      &::before,
+      &::after
+        content: ''
+        width: 40%
+        height: 2px
+        position: absolute
+        top: 45%
+        left: 50%
+        background-color: #fff
+
+      &::before
+        transform: translate(-20%, -50%) rotateZ(50deg)
+
+
+      &::after
+        transform: translate(-80%, -50%) rotateZ(-50deg)
+
+    .scrollup-btn:active
+      transform: scale(.98)
+
+    .scrollup-btn.hidden
+      visibility: hidden
+      opacity: 0
+      transition: opacity .5s ease

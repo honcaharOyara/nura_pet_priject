@@ -6,11 +6,11 @@ head
     link(rel="icon" type="image/x-icon" href="./img/favicon.png")
     link(rel='stylesheet' href='./css/main.css')
 body
-    header
+    header#header
         nav.header_nav-unscrolled#nav
             .container
                 .header__logo
-                    a(href="#")
+                    a(href="#header")
                         img(src="./img/logo.png" alt="Logo" title="Nura elite")
 
                 .header__navigation
@@ -25,15 +25,15 @@ body
                     .header__navigation__nav_menu
                         ul
                             li
-                                a(href="#1_about-project") About project
+                                a(href="#about-project") About project
                             li
-                                a(href="#3_location") Location
+                                a(href="#location") Location
                             li
-                                a(href="#4_advantages") Benefits
+                                a(href="#advantages") Benefits
                             li
-                                a(href="#5_why-nura") Why we are
+                                a(href="#why-nura") Why we are
                             li
-                                 a(href="#7_payments") Payments methods
+                                 a(href="#payments") Payments methods
                             li
                                 a(href="#contacts") Contacts
 
@@ -58,8 +58,8 @@ body
 
 
     main
-        section._1_about-project#1_about-project
-            h2.h2-parallax-bg
+        section._1_about-project#about-project
+            h2.h2-amin-title-bg About project
             .container
                 h2.h2-title About project
                 .about-project__wrap
@@ -114,7 +114,8 @@ body
                         img(src="./img/arrow-right.svg")
 
 
-        section._3_location#3_location
+        section._3_location#location
+            h2.h2-amin-title-bg Location
             .container
                 .location__content
                     h2.h2-title Location
@@ -126,7 +127,7 @@ body
                     .location__map__bg-dots
 
 
-        section._4_advantages#4_advantages
+        section._4_advantages#advantages
             .container
                 img.advantages__dots(src="./img/dots.svg")
                 img.advantages__bg(src="./img/4_advantages_bg.svg")
@@ -167,7 +168,8 @@ body
                             p Each owner of the cottage is given the opportunity to build additional buildings on his #[br] land plot: a bathhouse, a sauna, a summer kitchen, etc.
 
 
-        section._5_why-nura#5_why-nura
+        section._5_why-nura#why-nura
+            h2.h2-amin-title-bg Why NURA ELITE?
             .container
                 h2.h2-title Why NURA ELITE?
                 .why-nura__content-box
@@ -204,7 +206,8 @@ body
                                     p Centralized water supply, power supply and sewerage.
                                     p The heating system and hot water is one common gas tank for the entire town, functioning at the expense of gas.
 
-        section._6_technologies#6_technologies
+        section._6_technologies#technologies
+            h2.h2-amin-title-bg Building technology
             .container
                 h2.h2-title Building technology
                 .technologies__content-box
@@ -237,17 +240,19 @@ body
                             p FBC is a unique and high-quality building material for durable facade cladding.
                                 | High frost resistance, fire safety, good sound and heat insulation, tightness, increased strength, weather resistance.
                                 | for both humans and the environment. They do not contain asbestos, consist of environmentally friendly natural ingredients: 82-85% cement, wood fiber, weight loss additives, organosilicon compounds
-                .technologies__download-presentation
-                    h2.h2-title Download presentation
-                    p Leave your contacts and we will send you
-                    form#dowload_presentation
-                        input._req(type="text" placeholder="Your name" required)
-                        input._req(type="number" placeholder="Phone number" required)
-                        input(type="submit")
-                .technologies__bg-logo
-                    img(src="./img/bg-logo__cherry.svg")
+                .technologies__download-presentation__box#dowload_presentation
+                    .technologies__download-presentation
+                        h2.h2-title Download presentation
+                        p Leave your contacts and we will send you
+                        form
+                            input._req(type="text" placeholder="Your name" required)
+                            input._req(type="number" placeholder="Phone number" required)
+                            input(type="submit")
+                    .technologies__bg-logo
+                        img(src="./img/bg-logo__cherry.svg")
 
-        section._7_payments#7_payments
+        section._7_payments#payments
+            h2.h2-amin-title-bg Payment methods
             .container
                 h2.h2-title Payment methods
                 ul
@@ -263,10 +268,10 @@ body
                     li
                         img.payments_icon-4(src="./img/7_payments_icon-4.svg")
                         p Payment with #[br] cryptocurrency (Bitcoin)
-                .payments__address
+                .payments__address#contacts
                     .payments__address__map
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.755751349219!2d71.42242228172763!3d51.13141316940208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586a04e901251%3A0x5047617e2afb5feb!2z0JjQt9GD0LzRgNGD0LTQvdGL0Lkg0LrQsi3Quywg0YPQuy4g0JTQuNC90LzRg9GF0LDQvNC10LTQsCDQmtGD0L3QsNC10LLQsCAxMCwg0J3Rg9GALdCh0YPQu9GC0LDQvSAwMjAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sua!4v1646328085084!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    .payments__address__contacts#contacts
+                    .payments__address__contacts
                         h2.h2-title Contacts
                         a(href="https://www.google.com/maps/place/%D0%91%D0%A6+Emerald+Tower/@51.1307261,71.4210632,17z/data=!4m9!1m2!2m1!1z0J3Rg9GALdCh0YPQu9GC0LDQvSwg0JrQsNC30LDRhdGB0YLQsNC9INGD0LsuINCa0YPQvdCw0LXQstCwIDEwLCDQkdCmIOKAnNCY0LfRg9C80YDRg9C00L3Ri9C54oCd!3m5!1s0x42458713a6ad47d5:0x51b4bb921db67e09!8m2!3d51.1308914!4d71.4236561!15sCmDQndGD0YAt0KHRg9C70YLQsNC9LCDQmtCw0LfQsNGF0YHRgtCw0L0g0YPQuy4g0JrRg9C90LDQtdCy0LAgMTAsINCR0KYg4oCc0JjQt9GD0LzRgNGD0LTQvdGL0LnigJ2SARpvZmZpY2Vfc3BhY2VfcmVudGFsX2FnZW5jeQ" target="_blank") Nur-Sultan city, st. Kunaeva 10, business center "Emerald", block - A, floor 1
                         .payments__address__contacts-box
@@ -287,13 +292,13 @@ body
         .container
             ul
                 li
-                    a(href="#4_advantages") Benefits
+                    a(href="#advantages") Benefits
                 li
-                    a(href="#5_why-nura") Why we are
+                    a(href="#why-nura") Why we are
                 li
-                    a(href="#6_technologies") Technologies
+                    a(href="#technologies") Technologies
                 li
-                    a(href="#7_payments") Payments methods
+                    a(href="#payments") Payments methods
 
     .burger-menu__btn-open
         .burger-menu__btn-open__inner
@@ -305,15 +310,15 @@ body
             .burger-menu__content
                 ul
                     li
-                        a(href="#1_about-project") About project
+                        a(href="#about-project") About project
                     li
-                        a(href="#3_location") Location
+                        a(href="#location") Location
                     li
-                        a(href="#4_advantages") Benefits
+                        a(href="#advantages") Benefits
                     li
-                        a(href="#5_why-nura") Why we are
+                        a(href="#why-nura") Why we are
                     li
-                        a(href="#7_payments") Payments methods
+                        a(href="#payments") Payments methods
                     li
                         a(href="#contacts") Contacts
 
@@ -328,5 +333,8 @@ body
                     input._req(type="text" placeholder="Your name" required)
                     input._req(type="number" placeholder="Phone number" required)
                     input.close-modal-window(type="submit")
+
+
+    a.scrollup-btn.hidden(href="#header")
 
     script(src="./js/script.js")

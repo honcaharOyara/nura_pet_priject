@@ -97,6 +97,7 @@ header
 
   section.header__banner
     padding-top: 115px
+
     .container
       +display(flex)
 
@@ -166,6 +167,9 @@ header
         p:not(:last-child)
           margin-bottom: 20px
 
+  section.header__banner.pt-250px
+    padding-top: 250px
+
 header
   nav.header_nav-scrolled
     width: 100%
@@ -181,19 +185,17 @@ header
       justify-content: space-between
 
       .header__logo
-        margin: 20px 0
         a
           display: block
-          border: 3px #dba069 solid
           transition: border-color .5s ease
 
           img
-            max-width: 50px
+            max-width: 90px
             width: 100%
+            transition: all .3s ease
 
         a:hover
-          border: 3px #842231 solid
-          transition: border-color .3s ease
+          transition: all .3s ease
 
       .header__navigation
         padding-top: 40px
@@ -234,3 +236,71 @@ header
               &:after
                 width: 100%
                 background-color: #842231
+
+@include media_laptop
+  header
+    nav.header_nav-unscrolled
+      .container
+        .header__navigation
+          .header__navigation__nav_menu
+            ul
+              li
+                margin-left: 13px
+
+  header
+    nav.header_nav-scrolled
+      .container
+        .header__navigation
+          .header__navigation__nav_menu
+            ul
+              li
+                margin-left: 20px
+                font-size: initial
+
+@include media_tablet
+  header
+    padding-top: 50px
+    nav.header_nav-unscrolled,
+    nav.header_nav-scrolled
+      display: none
+
+    section.header__banner
+      .container
+        display: initial
+        .header__banner__info
+          h1,
+          h3
+            text-align: center
+          a
+            display: none
+          .header__banner__info__box
+            justify-content: center
+        .header__banner__deadlines
+          max-width: 100%
+          text-align: center
+
+    section.header__banner.pt-250px
+      padding-top: 115px
+
+@include media_tablet-mobile
+  header
+    section.header__banner
+      .container
+        .header__banner__info
+          .header__banner__info__box
+            justify-content: space-evenly
+            margin-bottom: 30px
+            div
+              flex-direction: column
+              text-align: center
+              div:first-child
+                margin: 0
+
+@include media_mobile-xxs
+  header
+    section.header__banner
+      .container
+        .header__banner__info
+          .header__banner__info__box
+            div
+              margin: 0

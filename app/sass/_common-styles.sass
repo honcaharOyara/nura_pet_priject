@@ -8,4 +8,18 @@
   font-size: $font48px
   font-weight: 700
 
-//.h2-parallax-bg
+.h2-amin-title-bg
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  font-weight: 700
+  color: rgba(51, 51, 51, 0.3)
+  white-space: nowrap
+  opacity: 1
+
+@include media_tablet
+  section
+    .h2-amin-title-bg
+      display: none

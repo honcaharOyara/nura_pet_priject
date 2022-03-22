@@ -71,6 +71,7 @@ const burgerMenuBtnOpen = document.querySelector('body .burger-menu__btn-open')
 const burgerMenuBtnClose = document.querySelector('body .burger-menu .burger-menu__wrap .burger-menu__btn-close')
 const burgerMenu = document.querySelector('.burger-menu')
 const burgerMenuWrap = document.querySelector('.burger-menu__wrap')
+const burgerMenuLinksToScroll = document.querySelectorAll('body .burger-menu .burger-menu__wrap .burger-menu__content ul li a')
 
 burgerMenuBtnOpen.addEventListener('click', openBurger)
 
@@ -83,6 +84,12 @@ function openBurger() {
 
     burgerMenuWrap.addEventListener('click', e => e.stopPropagation())
     burgerMenu.addEventListener('click', closeBurger)
+    for(let burgerMenuLinkToScroll of burgerMenuLinksToScroll) {
+        burgerMenuLinkToScroll.addEventListener('click', function (e) {
+            e.preventDefault()
+            closeBurger()
+        })
+    }
 }
 
 function closeBurger() {
@@ -94,6 +101,7 @@ function closeBurger() {
 // ================================ Navigation ================================ //
 const headerNav = document.querySelector('body header nav')
 const headerBanner = document.querySelector('.header__banner')
+const scrollUpBtn = document.querySelector('body a.scrollup-btn')
 
 window.addEventListener('scroll', function () {
     let scrollYValue = window.pageYOffset
@@ -105,23 +113,37 @@ function scrollInit(scrollYValue) {
     if (scrollYValue > 0) {
         headerNav.classList.remove('header_nav-unscrolled')
         headerNav.classList.add('header_nav-scrolled')
-        headerBanner.style.paddingTop = '250px'
+        headerBanner.classList.add('pt-250px')
+        scrollUpBtn.classList.remove('hidden')
     } else {
         headerNav.classList.add('header_nav-unscrolled')
         headerNav.classList.remove('header_nav-scrolled')
-        headerBanner.style.paddingTop = '115px'
+        headerBanner.classList.remove('pt-250px')
+        scrollUpBtn.classList.add('hidden')
     }
 }
 
-const anchorsHeader = document.querySelectorAll('header nav .container .header__navigation .header__navigation__nav_menu ul li a[href*="#"]')
-
+const anchorsHeader = document.querySelectorAll('a[href*="#"]')
 for (let anchorHeader of anchorsHeader) {
     anchorHeader.addEventListener('click', function (e) {
         e.preventDefault()
         const blockId = anchorHeader.getAttribute('href')
         document.querySelector('' + blockId).scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
+            top: '-100px'
         })
     })
 }
+
+// ================================ Animations ================================ //
+const animTitlesBg = document.querySelectorAll('.h2-amin-title-bg')
+
+window.addEventListener('scroll',function () {
+    for (let animTitleBg of animTitlesBg) {
+        const parentOfTitle = animTitleBg.parentElement
+        let scrollYValue = Math.round(parentOfTitle.getBoundingClientRect().top)
+        animTitleBg.style.left = scrollYValue + 'px'
+        body.style.overflowX = 'hidden'
+    }
+})

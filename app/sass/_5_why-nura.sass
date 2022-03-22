@@ -1,6 +1,11 @@
 main
   section._5_why-nura
     padding: 99px 0 34px 0
+    position: relative
+
+    h2.h2-amin-title-bg
+      font-size: 9.125rem
+      line-height: 15.125rem
 
     .container
       h2
@@ -83,3 +88,64 @@ main
 
                 p:last-child
                   margin-top: 20px
+
+@include media_desktop
+  main
+    section._5_why-nura
+      padding: 60px 0 40px 0
+
+      .container
+        h2
+          margin-bottom: 40px
+
+        .why-nura__content-box
+          .why-nura__img-box
+            padding-bottom: 40px
+            width: 100%
+            height: initial
+
+            img.why-nura__img
+              position: initial
+              max-width: 100%
+              max-height: initial
+              height: initial
+
+            .why-nura__bg-color,
+            .why-nura__bg-dots
+              display: none
+
+          .why-nura__content-box__inner
+            ul
+              padding: 0
+              max-width: 50%
+
+@include media_laptop
+  main
+    section._5_why-nura
+      .container
+        .why-nura__content-box
+          display: initial
+
+@include media_tablet-mobile
+  main
+    section._5_why-nura
+      padding: 20px 0 40px 0
+
+      .container
+        padding: 0
+
+        h2
+          margin-left: 20px
+
+        .why-nura__content-box
+          .why-nura__content-box__inner
+            padding: 0 20px
+            display: initial
+
+            ul
+              max-width: 100%
+
+            ul:first-child,
+            ul:last-child
+              margin: 0
+              padding: 0
