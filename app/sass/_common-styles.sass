@@ -19,6 +19,18 @@
   white-space: nowrap
   opacity: 1
 
+._anim-item
+  position: relative
+  top: 100px
+  opacity: 0
+  transition: all .3s ease
+
+._anim-item.active
+    top: 0
+    opacity: 1
+    transition: all .3s ease
+
+
 @include media_tablet
   section
     .h2-amin-title-bg

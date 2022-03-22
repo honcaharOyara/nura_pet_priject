@@ -14,6 +14,10 @@
   column-count: $property
 
 //Responsive
+@mixin media_tablet-min ()
+  @media (min-width: $breakpoint_md)
+    @content
+
 @mixin media_desktop ()
   @media (max-width: $breakpoint_xl)
     @content

@@ -53,7 +53,6 @@ const lockPaddingValue = window.innerWidth - document.querySelector('body').offs
 modalWindowLink.addEventListener('click', function (e) {
     modalWindowBg.classList.add('open')
     body.style.overflowY = 'hidden'
-    // document.querySelector('section').style.paddingRight = lockPaddingValue // add padding right scrollbar size
     modalWindowWrap.addEventListener('click', (e) => e.stopPropagation())
     burgerMenu.classList.remove('open')
     burgerMenuBtnOpen.classList.remove('hide-burger-menu__btn')
@@ -63,7 +62,6 @@ modalWindowLink.addEventListener('click', function (e) {
 modalWindowBg.addEventListener('click', function () {
     modalWindowBg.classList.remove('open')
     body.style.overflowY = 'initial'
-    // document.querySelector('section').style.padding = '0' // remove padding right scrollbar size
 })
 
 // ================================ Burger menu ================================ //
@@ -99,6 +97,7 @@ function closeBurger() {
 }
 
 // ================================ Navigation ================================ //
+//Fixed header
 const headerNav = document.querySelector('body header nav')
 const headerBanner = document.querySelector('.header__banner')
 const scrollUpBtn = document.querySelector('body a.scrollup-btn')
@@ -123,27 +122,67 @@ function scrollInit(scrollYValue) {
     }
 }
 
+//Scroll to anchors
 const anchorsHeader = document.querySelectorAll('a[href*="#"]')
-for (let anchorHeader of anchorsHeader) {
-    anchorHeader.addEventListener('click', function (e) {
-        e.preventDefault()
-        const blockId = anchorHeader.getAttribute('href')
-        document.querySelector('' + blockId).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            top: '-100px'
+
+if (anchorsHeader.length > 0) {
+    for (let anchorHeader of anchorsHeader) {
+        anchorHeader.addEventListener('click', function (e) {
+            e.preventDefault()
+            const blockId = anchorHeader.getAttribute('href')
+            document.querySelector('' + blockId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                top: '-100px'
+            })
         })
-    })
+    }
 }
 
 // ================================ Animations ================================ //
+//Animation scroll title background
 const animTitlesBg = document.querySelectorAll('.h2-amin-title-bg')
+body.style.overflowX = 'hidden'
 
-window.addEventListener('scroll',function () {
-    for (let animTitleBg of animTitlesBg) {
-        const parentOfTitle = animTitleBg.parentElement
-        let scrollYValue = Math.round(parentOfTitle.getBoundingClientRect().top)
-        animTitleBg.style.left = scrollYValue + 'px'
-        body.style.overflowX = 'hidden'
-    }
-})
+if (animTitlesBg.length > 0) {
+    window.addEventListener('scroll',function () {
+        for (let animTitleBg of animTitlesBg) {
+            const parentOfTitle = animTitleBg.parentElement
+            let scrollYValue = Math.round(parentOfTitle.getBoundingClientRect().top)
+            animTitleBg.style.left = scrollYValue + 'px'
+        }
+    })
+}
+
+//Animation scroll content
+// const animSections = document.querySelectorAll('section')
+// const animItems = document.querySelectorAll('section')
+//
+// if (animItems.length > 0) {
+//     window.addEventListener('scroll', animItemOnScroll)
+//     function animItemOnScroll(params) {
+//         for (let animSection of animSections){
+//             for (let animItem of animItems){
+//                 const animSectionHeight = animSection.offsetHeight
+//                 const animItemOffset = offset(animSection).top
+//                 const animStart = 200
+//
+//                 let animItemPoint = window.innerHeight - animSectionHeight / animStart
+//
+//                 if (animSectionHeight > window.innerHeight) {
+//                     animItemPoint = window.innerHeight - window.innerHeight / animStart
+//                 }
+//                 if ((pageYOffset > animItemOffset - animStart) && pageYOffset < (animItemOffset + animSectionHeight)){
+//                     animItem.classList.add('_active')
+//                 }
+//             }
+//         }
+//     }
+//     function offset(el) {
+//         const rect = el.getBoundingClientRect(),
+//             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+//             scrollTop = window.pageYOffset || document.documentElement.scrollTop
+//         return{top: rect.top + scrollTop, left: rect.left + scrollLeft}
+//     }
+//     setTimeout(() => animItemOnScroll(), 500)
+// }

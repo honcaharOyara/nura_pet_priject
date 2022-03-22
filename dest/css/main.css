@@ -129,6 +129,19 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+._anim-item {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+._anim-item.active {
+  top: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
   section .h2-amin-title-bg {
     display: none;
