@@ -27,7 +27,7 @@ const jsPath = [
 function buildStyles() {
     return src(appPath.sass)
         .pipe(sass({
-            // outputStyle: 'compressed'
+            outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(dest(destPath.css))
         .pipe(connect.reload());
