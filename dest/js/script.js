@@ -82,7 +82,7 @@ function openBurger() {
 
     burgerMenuWrap.addEventListener('click', e => e.stopPropagation())
     burgerMenu.addEventListener('click', closeBurger)
-    for(let burgerMenuLinkToScroll of burgerMenuLinksToScroll) {
+    for (let burgerMenuLinkToScroll of burgerMenuLinksToScroll) {
         burgerMenuLinkToScroll.addEventListener('click', function (e) {
             e.preventDefault()
             closeBurger()
@@ -113,6 +113,7 @@ function scrollInit(scrollYValue) {
         headerNav.classList.add('header_nav-scrolled')
         headerBanner.classList.add('pt-250px')
         scrollUpBtn.classList.remove('hidden')
+
     } else {
         headerNav.classList.add('header_nav-unscrolled')
         headerNav.classList.remove('header_nav-scrolled')
@@ -120,7 +121,6 @@ function scrollInit(scrollYValue) {
         scrollUpBtn.classList.add('hidden')
     }
 }
-
 //Scroll to anchors
 const anchorsHeader = document.querySelectorAll('a[href*="#"]')
 
@@ -128,6 +128,7 @@ if (anchorsHeader.length > 0) {
     for (let anchorHeader of anchorsHeader) {
         anchorHeader.addEventListener('click', function (e) {
             e.preventDefault()
+            console.log(this)
             const blockId = anchorHeader.getAttribute('href')
             document.querySelector('' + blockId).scrollIntoView({
                 behavior: 'smooth',
@@ -144,7 +145,7 @@ const animTitlesBg = document.querySelectorAll('.h2-amin-title-bg')
 // body.style.overflowX = 'hidden'
 
 if (animTitlesBg.length > 0) {
-    window.addEventListener('scroll',function () {
+    window.addEventListener('scroll', function () {
         for (let animTitleBg of animTitlesBg) {
             const parentOfTitle = animTitleBg.parentElement
             let scrollYValue = Math.round(parentOfTitle.getBoundingClientRect().top)
@@ -158,8 +159,9 @@ const animItems = document.querySelectorAll('._anim-item')
 
 if (animItems.length > 0) {
     window.addEventListener('scroll', animItemsOnScroll)
+
     function animItemsOnScroll(params) {
-        for (let animItem of animItems){
+        for (let animItem of animItems) {
             const animItemHeight = animItem.offsetHeight
             const animItemOffset = offset(animItem).top
             const animStart = 200
@@ -169,16 +171,18 @@ if (animItems.length > 0) {
             if (animItemHeight > window.innerHeight) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart
             }
-            if ((pageYOffset > animItemOffset - animStart) && pageYOffset < (animItemOffset + animItemHeight)){
+            if ((pageYOffset > animItemOffset - animStart) && pageYOffset < (animItemOffset + animItemHeight)) {
                 animItem.classList.add('_active')
             }
         }
     }
+
     function offset(el) {
         const rect = el.getBoundingClientRect(),
             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
             scrollTop = window.pageYOffset || document.documentElement.scrollTop
-        return{top: rect.top + scrollTop, left: rect.left + scrollLeft}
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
     }
+
     setTimeout(() => animItemsOnScroll(), 500)
 }

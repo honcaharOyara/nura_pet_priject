@@ -105,6 +105,15 @@ html {
   font-weight: 300;
 }
 
+@media (max-width: 768px) {
+  html {
+    overflow-x: initial;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
 body {
   position: relative;
 }
@@ -1449,7 +1458,7 @@ body .modal-window {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 50;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-x: hidden;
   overflow-y: auto;
@@ -1513,7 +1522,7 @@ body .burger-menu {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 6;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-x: hidden;
   overflow-y: auto;
@@ -1652,6 +1661,7 @@ body .burger-menu__btn-open.hide-burger-menu__btn {
   body .burger-menu__btn-open {
     opacity: 1;
     visibility: visible;
+    z-index: 100;
   }
 }
 @media (max-width: 576px) {

@@ -4,6 +4,13 @@ html
   font-size: 16px
   font-weight: 300
 
+@include media_tablet
+  html
+    overflow-x: initial
+
+  ::-webkit-scrollbar
+    display: none
+
 body
   position: relative
 
