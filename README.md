@@ -1,4 +1,4 @@
-[Wath preview](]https://honcaharoyara.github.io/nura_pet_priject/dest/index.html)
+[Wath preview](https://honcaharoyara.github.io/nura_pet_priject/dest/index.html)
 
 Hello everyone;)
 
